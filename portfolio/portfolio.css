@@ -113,8 +113,8 @@ body {
   text-decoration: none;
   transition: color 0.2s ease;
   border: 1px solid var(--purple);
-  border-left-color: transparent;
-  border-right-color: transparent;
+  border-left-color: var(--ink);
+  border-right-color: var(--ink);
   border-radius: 10px;
   padding: 9px 16px;
 }
