@@ -285,7 +285,7 @@ body {
 }
 
 .project-flow span {
-  color: var(--purple);
+  color: var(--teal);
   font-family: "Courier New", Courier, monospace;
   font-size: 11px;
   letter-spacing: 0.08em;
