@@ -65,13 +65,38 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 80px 40px 60px;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  gap: 80px;
+  align-items: end;
 }
+
+.hero-context {
+  border-top: 2px solid var(--coral);
+  padding-top: 24px;
+  padding-bottom: 6px;
+}
+
+.hero-context h2 {
+  margin: 0 0 18px;
+  color: var(--cream);
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.hero-context p {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
 .hero h1 {
   font-size: 72px;
   line-height: 1.05;
   margin: 24px 0;
   font-family: "Times New Roman", serif;
 }
+
 .eyebrow {
   font-family: "Courier New", Courier, monospace;
   font-size: 13px;
