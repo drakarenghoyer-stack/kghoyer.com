@@ -113,8 +113,8 @@ body {
   text-decoration: none;
   transition: color 0.2s ease;
   border: 1px solid var(--purple);
-  border-left-color: var(--ink);
-  border-right-color: var(--ink);
+  border-left-color: rgba(217, 223, 220, 0.35);
+  border-right-color: rgba(217, 223, 220, 0.35);
   border-radius: 10px;
   padding: 9px 16px;
 }
@@ -261,8 +261,8 @@ body {
   text-decoration: none;
 
   border: 1px solid var(--purple);
-  border-left-color: black;
-  border-right-color: black;
+  border-left-color: rgba(217, 223, 220, 0.35);
+  border-right-color: rgba(217, 223, 220, 0.35);
   border-radius: 10px;
 
   padding: 9px 16px;
@@ -296,7 +296,7 @@ body {
   font-family: "Courier New", Courier, monospace;
   font-size: 12px;
   letter-spacing: 0.12em;
-  border: 1px solid #6568a4;
+  border: 1px solid var(--purple);
   border-radius: 999px;
   padding: 8px 12px;
   white-space: nowrap;
@@ -338,7 +338,7 @@ body {
 .taxonomy-group code {
   display: inline-block;
   width: 70px;
-  color: #6568a4;
+  color: var(--purple);
   font-weight: bold;
 }
 
