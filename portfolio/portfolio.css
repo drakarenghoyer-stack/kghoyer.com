@@ -1,3 +1,16 @@
+:root {
+  --ink: #0b2236;
+  --cream: #fcf0cc;
+  --purple: #6568a4;
+
+  --teal: #176d68;
+  --mint: #a5ded1;
+  --coral: #f67a5f;
+
+  --paper: #f7f5ef;
+  --line: #d9dfdc;
+  --muted: #506372;
+}
 body {
   margin: 0;
   min-height: 100vh;
