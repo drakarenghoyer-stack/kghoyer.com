@@ -286,6 +286,34 @@ body {
 .project-actions a:hover {
   color: var(--purple);
 }
+.project-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(244, 227, 189, 0.12);
+}
+
+.project-flow div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-flow span {
+  color: var(--purple);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.project-flow strong {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+}
 
 .taxonomy {
   margin-top: 80px;
@@ -397,5 +425,8 @@ body {
 
 .taxonomy-group-header {
   flex-direction: column;
+}
+  .project-flow {
+  grid-template-columns: 1fr 1fr;
 }
 }
