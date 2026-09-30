@@ -45,3 +45,34 @@ body {
   font-size: 48px;
   margin: 20px 0 48px;
 }
+<article class="project-card">
+  <div class="project-meta">
+    <span>PROJECT 01</span>
+    <span>AI EVALUATION · CLINICAL SAFETY</span>
+  </div>
+
+  <h3>Lay Summary Auditor</h3>
+
+  <p class="project-intro">
+    A structured evaluation framework for detecting clinically meaningful
+    errors in AI-generated lay summaries of medical evidence.
+  </p>
+
+  <div class="project-details">
+    <p>
+      <strong>FOCUS</strong>
+      Factual accuracy, evidence hierarchy, omission and unsupported claims.
+    </p>
+
+    <p>
+      <strong>METHOD</strong>
+      Blind auditing against structured reference evidence using a predefined
+      error taxonomy.
+    </p>
+
+    <p>
+      <strong>STATUS</strong>
+      Evaluation framework built. Final calibration panel not yet run.
+    </p>
+  </div>
+</article>
