@@ -196,6 +196,24 @@ body {
   letter-spacing: 0.12em;
   margin-bottom: 10px;
 }
+
+.project-flow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(244, 227, 189, 0.12);
+
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.project-flow span:nth-child(even) {
+  color: var(--purple);
+}
+
 .evidence-case {
   margin-top: 80px;
   padding-top: 48px;
