@@ -90,6 +90,40 @@ body {
   letter-spacing: 0.12em;
   margin-bottom: 10px;
 }
+.evidence-case {
+  margin-top: 80px;
+  padding-top: 48px;
+  border-top: 1px solid rgba(244, 227, 189, 0.25);
+}
+
+.case-label,
+.claim-status {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.evidence-case h3 {
+  font-size: 32px;
+  margin: 18px 0 32px;
+}
+
+.claim-comparison {
+  display: flex;
+  gap: 24px;
+}
+
+.claim-comparison > div {
+  flex: 1;
+  padding: 24px;
+  border: 1px solid rgba(244, 227, 189, 0.18);
+  border-radius: 12px;
+}
+
+.claim-comparison p {
+  line-height: 1.6;
+  margin-bottom: 0;
+}
 @media (max-width: 700px) {
   .hero {
     padding: 80px 24px;
