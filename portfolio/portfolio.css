@@ -197,10 +197,6 @@ body {
   margin-bottom: 10px;
 }
 
-.project-flow span:nth-child(even) {
-  color: var(--purple);
-}
-
 .evidence-case {
   margin-top: 80px;
   padding-top: 48px;
