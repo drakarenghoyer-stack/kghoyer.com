@@ -97,6 +97,26 @@ body {
   font-family: "Times New Roman", serif;
 }
 
+.hero-actions {
+  display: flex;
+  gap: 28px;
+  margin-top: 32px;
+}
+
+.hero-actions a {
+  color: var(--cream);
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.hero-actions a:hover {
+  color: var(--purple);
+}
+
 .eyebrow {
   font-family: "Courier New", Courier, monospace;
   font-size: 13px;
