@@ -4,3 +4,8 @@ body {
   background: #0b2638;
   color: #f4e3bd;
 }
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 40px;
+}
