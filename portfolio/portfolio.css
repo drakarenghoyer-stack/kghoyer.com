@@ -111,6 +111,10 @@ body {
   letter-spacing: 0.08em;
   text-decoration: none;
   transition: color 0.2s ease;
+  border: 1px solid var(--purple);
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-radius: 10px;
 }
 
 .hero-actions a:hover {
