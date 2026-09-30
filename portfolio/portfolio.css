@@ -14,9 +14,10 @@ body {
   font-size: 72px;
   line-height: 1.05;
   margin: 24px 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Times New Roman", serif;
 }
 .eyebrow {
+  font-family: "Courier New", Courier, monospace;
   font-size: 13px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
