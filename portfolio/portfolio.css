@@ -139,6 +139,80 @@ body {
   font-size: 13px;
   letter-spacing: 0.08em;
 }
+.taxonomy {
+  margin-top: 80px;
+  padding-top: 48px;
+  border-top: 1px solid rgba(244, 227, 189, 0.25);
+}
+
+.taxonomy-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.taxonomy-header h3 {
+  font-size: 32px;
+  margin: 18px 0 32px;
+}
+
+.taxonomy-count {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  border: 1px solid #6568a4;
+  border-radius: 999px;
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+
+.taxonomy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.taxonomy-group {
+  padding: 28px;
+  border: 1px solid rgba(244, 227, 189, 0.18);
+  border-radius: 12px;
+}
+
+.taxonomy-group-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+
+.taxonomy-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 28px 0 0;
+}
+
+.taxonomy-group li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(244, 227, 189, 0.1);
+  line-height: 1.5;
+}
+
+.taxonomy-group code {
+  display: inline-block;
+  width: 70px;
+  color: #6568a4;
+  font-weight: bold;
+}
+
+.taxonomy-note {
+  margin-top: 24px;
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.7;
+}
 
 @media (max-width: 700px) {
   .hero {
@@ -165,4 +239,15 @@ body {
     flex-direction: column;
     gap: 20px;
   }
+  .taxonomy-header {
+  flex-direction: column;
+}
+
+.taxonomy-grid {
+  grid-template-columns: 1fr;
+}
+
+.taxonomy-group-header {
+  flex-direction: column;
+}
 }
