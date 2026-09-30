@@ -45,34 +45,48 @@ body {
   font-size: 48px;
   margin: 20px 0 48px;
 }
-<article class="project-card">
-  <div class="project-meta">
-    <span>PROJECT 01</span>
-    <span>AI EVALUATION · CLINICAL SAFETY</span>
-  </div>
+.project-card {
+  border: 1px solid rgba(244, 227, 189, 0.25);
+  border-radius: 16px;
+  padding: 40px;
+}
 
-  <h3>Lay Summary Auditor</h3>
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
 
-  <p class="project-intro">
-    A structured evaluation framework for detecting clinically meaningful
-    errors in AI-generated lay summaries of medical evidence.
-  </p>
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
 
-  <div class="project-details">
-    <p>
-      <strong>FOCUS</strong>
-      Factual accuracy, evidence hierarchy, omission and unsupported claims.
-    </p>
+.project-card h3 {
+  font-size: 36px;
+  margin: 32px 0 16px;
+}
 
-    <p>
-      <strong>METHOD</strong>
-      Blind auditing against structured reference evidence using a predefined
-      error taxonomy.
-    </p>
+.project-intro {
+  max-width: 700px;
+  font-size: 18px;
+  line-height: 1.6;
+}
 
-    <p>
-      <strong>STATUS</strong>
-      Evaluation framework built. Final calibration panel not yet run.
-    </p>
-  </div>
-</article>
+.project-details {
+  display: flex;
+  gap: 40px;
+  margin-top: 48px;
+}
+
+.project-details p {
+  flex: 1;
+  line-height: 1.6;
+}
+
+.project-details strong {
+  display: block;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+}
