@@ -14,3 +14,14 @@ body {
   line-height: 1.05;
   margin: 24px 0;
 }
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero-description {
+  max-width: 650px;
+  font-size: 18px;
+  line-height: 1.7;
+}
