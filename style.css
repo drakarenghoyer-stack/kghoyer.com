@@ -41,16 +41,20 @@ a {
   display: block;
   text-align: center;
   margin-top: 20px;
-  margin-left: 440px;
-  margin-right: 440px;
+  margin-left: 220px;
+  margin-right: 220px;
   color: blanchedalmond;
+    text-style: none;
+
 }
+
 p {
   font-style:italic;
   font-family:;
   font-weight: lighter;
   color: #6568a4;
 }
+
 span {
   position: relative;
   top: -10px;
