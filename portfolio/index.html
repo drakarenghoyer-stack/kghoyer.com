@@ -120,62 +120,136 @@
   </div>
 
   <div class="tab-content" id="taxonomy">
-  <p>
-    17 predefined failure modes covering unsupported or distorted
-    claims and missing required information.
-  </p>
+  <p>17 predefined failure modes · Taxonomy v0.4</p>
 
-  <div class="taxonomy-grid">
+  <div class="taxonomy-controls">
+    <div class="taxonomy-code-group">
+      <p class="taxonomy-label">COMMISSION · VERIFIABLE CLAIM</p>
 
-    <div class="taxonomy-group">
-      <div class="taxonomy-group-header">
-        <span>COMMISSION</span>
-        <span>6 codes · Verifiable claim</span>
+      <div class="taxonomy-codes">
+        <button type="button" class="taxonomy-step active" data-code="C1" aria-pressed="true">C1</button>
+        <button type="button" class="taxonomy-step" data-code="C2" aria-pressed="false">C2</button>
+        <button type="button" class="taxonomy-step" data-code="C3" aria-pressed="false">C3</button>
+        <button type="button" class="taxonomy-step" data-code="C4" aria-pressed="false">C4</button>
+        <button type="button" class="taxonomy-step" data-code="C5" aria-pressed="false">C5</button>
+        <button type="button" class="taxonomy-step" data-code="C6" aria-pressed="false">C6</button>
       </div>
-
-      <ul>
-        <li><code>C1</code> Unsupported efficacy claim.</li>
-        <li><code>C2</code> Significance or reliability misstated.</li>
-        <li><code>C3</code> Confidence intervals, p values or test statistics displayed numerically instead of explained in plain language.</li>
-        <li><code>C4</code> Quantitative statement contradicting the evidence table.</li>
-        <li><code>C5</code> Effect estimate reported for an outcome outside the confirmatory testing sequence, even when qualified.</li>
-        <li><code>C6</code> Adverse event frequency presented as a bare percentage or percentage table without a denominator stated in words at the point of use.</li>
-      </ul>
     </div>
 
-    <div class="taxonomy-group">
-      <div class="taxonomy-group-header">
-        <span>OMISSION</span>
-        <span>11 codes · Required element</span>
+    <div class="taxonomy-code-group">
+      <p class="taxonomy-label">OMISSION · REQUIRED ELEMENT</p>
+
+      <div class="taxonomy-codes">
+        <button type="button" class="taxonomy-step" data-code="O1" aria-pressed="false">O1</button>
+        <button type="button" class="taxonomy-step" data-code="O2" aria-pressed="false">O2</button>
+        <button type="button" class="taxonomy-step" data-code="O3" aria-pressed="false">O3</button>
+        <button type="button" class="taxonomy-step" data-code="O4" aria-pressed="false">O4</button>
+        <button type="button" class="taxonomy-step" data-code="O5" aria-pressed="false">O5</button>
+        <button type="button" class="taxonomy-step" data-code="O6" aria-pressed="false">O6</button>
+        <button type="button" class="taxonomy-step" data-code="O7" aria-pressed="false">O7</button>
+        <button type="button" class="taxonomy-step" data-code="O8" aria-pressed="false">O8</button>
+        <button type="button" class="taxonomy-step" data-code="O9" aria-pressed="false">O9</button>
+        <button type="button" class="taxonomy-step" data-code="O10" aria-pressed="false">O10</button>
+        <button type="button" class="taxonomy-step" data-code="O11" aria-pressed="false">O11</button>
       </div>
-
-      <ul>
-        <li><code>O1</code> Required uncertainty qualification absent or incomplete.</li>
-        <li><code>O2</code> Trial identification absent or incomplete.</li>
-        <li><code>O3</code> Sponsor name or contact details missing.</li>
-        <li><code>O4</code> Trial location, timing, objectives or rationale missing.</li>
-        <li><code>O5</code> Participant numbers, demographics or eligibility criteria missing.</li>
-        <li><code>O6</code> Investigational medicinal products missing.</li>
-        <li><code>O7</code> Adverse reactions or their frequency missing; a limited source scope must be disclosed.</li>
-        <li><code>O8</code> Overall results missing.</li>
-        <li><code>O9</code> Comments on the outcome missing.</li>
-        <li><code>O10</code> Follow-up trials not indicated.</li>
-        <li><code>O11</code> Where to find additional information missing.</li>
-      </ul>
     </div>
+  </div>
 
+  <div class="taxonomy-description active" data-code="C1">
+    <strong>C1 — Unsupported efficacy claim</strong>
+    <p>States or implies a benefit that the evidence table does not support.</p>
+  </div>
+
+  <div class="taxonomy-description" data-code="C2" hidden>
+    <strong>C2 — Significance misstated</strong>
+    <p>Presents a result as reliable, confirmed or significant when the analysis plan or reported values do not support it.</p>
+  </div>
+
+  <div class="taxonomy-description" data-code="C3" hidden>
+    <strong>C3 — Statistical apparatus displayed</strong>
+    <p>Prints confidence intervals, p values or test statistics numerically instead of explaining uncertainty in plain language, even when the values are correct.</p>
+  </div>
+
+  <div class="taxonomy-description" data-code="C4" hidden>
+    <strong>C4 — Numeric error</strong>
+    <p>Makes a quantitative statement that contradicts the evidence table: an incorrect value, denominator, direction or arithmetic derivation.</p>
+  </div>
+
+  <div class="taxonomy-description" data-code="C5" hidden>
+    <strong>C5 — Untested outcome given an effect estimate</strong>
+    <p>Reports a point estimate, difference, ratio or per-arm value for an outcome outside the confirmatory testing sequence, whether or not it is qualified.</p>
+  </div>
+
+  <div class="taxonomy-description" data-code="C6" hidden>
+    <strong>C6 — Frequency representation</strong>
+    <p>Presents adverse event frequency as a bare percentage, or a percentage table without a denominator stated in words at the point of use, leaving a calculation to the reader.</p>
+  </div>
+
+  <div class="taxonomy-description" data-code="O1" hidden>
+    <strong>O1 — Uncertainty not qualified</strong>
+    <p>Fails to convey that a non-significant or non-confirmatory result is unreliable or unconfirmed. For outcomes outside the testing sequence, the required qualification covers where full results are recorded, why testing was blocked and why benefit cannot be concluded.</p>
+  </div>
+
+  <div class="taxonomy-description" data-code="O2" hidden>
+    <strong>O2 — Trial identification absent or incomplete</strong>
+    <p>Omits required trial identifiers, such as the title, protocol number or EU trial number.</p>
+  </div>
+
+  <div class="taxonomy-description" data-code="O3" hidden>
+    <strong>O3 — Sponsor absent</strong>
+    <p>Omits the sponsor's name or contact details.</p>
+  </div>
+
+  <div class="taxonomy-description" data-code="O4" hidden>
+    <strong>O4 — General information absent or incomplete</strong>
+    <p>Omits where or when the trial was conducted, its main objectives or the reasons for conducting it.</p>
+  </div>
+
+  <div class="taxonomy-description" data-code="O5" hidden>
+    <strong>O5 — Population absent or incomplete</strong>
+    <p>Omits participant numbers, age or gender breakdowns, or inclusion and exclusion criteria.</p>
+  </div>
+
+  <div class="taxonomy-description" data-code="O6" hidden>
+    <strong>O6 — Investigational medicinal products absent</strong>
+    <p>Omits information identifying the investigational medicinal products.</p>
+  </div>
+
+  <div class="taxonomy-description" data-code="O7" hidden>
+    <strong>O7 — Adverse reactions or frequency absent</strong>
+    <p>Omits adverse reactions or their frequency. If the source contains only a prespecified subset, that limitation must be stated.</p>
+  </div>
+
+  <div class="taxonomy-description" data-code="O8" hidden>
+    <strong>O8 — Overall results absent</strong>
+    <p>Omits the trial's overall results.</p>
+  </div>
+
+  <div class="taxonomy-description" data-code="O9" hidden>
+    <strong>O9 — Comments on the outcome absent</strong>
+    <p>Omits comments on the trial outcome.</p>
+  </div>
+
+  <div class="taxonomy-description" data-code="O10" hidden>
+    <strong>O10 — Follow-up trials not indicated</strong>
+    <p>Omits an indication of whether follow-up trials are foreseen.</p>
+  </div>
+
+  <div class="taxonomy-description" data-code="O11" hidden>
+    <strong>O11 — Additional information absent</strong>
+    <p>Omits where readers can find additional information.</p>
   </div>
 
   <p class="taxonomy-note">
-    Project-defined taxonomy v0.4, informed by EU CTR Annex V
-    and pinned lay-summary guidance; not an official regulatory
-    classification. Omission codes are scored against the generator
-    only when the required information is available in the evidence
-    table. Extraction gaps are recorded separately.
+    Project-defined interpretation of EU CTR Annex V and pinned
+    lay-summary guidance; not an official regulatory classification.
+    Omission codes are scored against the generator only where the
+    evidence table carries the required information. Extraction gaps
+    are recorded separately.
   </p>
 </div>
-
-  <div class="tab-content" id="status">
+              
+              <div class="tab-content" id="status">
     <p>
       Evaluation framework built. Final calibration panel not yet run.
     </p>
