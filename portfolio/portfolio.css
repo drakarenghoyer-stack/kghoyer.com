@@ -473,6 +473,30 @@ body {
     flex-direction: column;
   }
 
+.taxonomy-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.taxonomy-summary span {
+  padding: 18px 20px;
+  border: 1px solid rgba(244, 227, 189, 0.16);
+  border-radius: 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.taxonomy-summary span:first-child {
+  color: var(--coral);
+}
+
+.taxonomy-summary span:last-child {
+  color: var(--teal);
+}
+  
   .project-details {
     flex-direction: column;
     gap: 20px;
