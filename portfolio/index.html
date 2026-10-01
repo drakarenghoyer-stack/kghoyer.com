@@ -65,18 +65,34 @@
             <h3>Lay Summary Auditor</h3>
             <p class="project-intro">A structured evaluation framework for detecting clinically meaningful
     errors in AI-generated lay summaries of medical evidence.</p>
-            <div class="project-details">
-              <p>
-                <strong>FOCUS</strong>Factual accuracy, evidence hierarchy, omission and unsupported claims.
-              </p>
-              <p>
-                <strong>METHOD</strong>Blind auditing against structured reference evidence using a predefined
+            <div class="project-tabs">
+
+  <div class="tab-buttons">
+    <button class="tab-button active" data-tab="method">METHOD</button>
+    <button class="tab-button" data-tab="taxonomy">TAXONOMY</button>
+    <button class="tab-button" data-tab="status">STATUS</button>
+  </div>
+
+  <div class="tab-content active" id="method">
+    <p>
+      Blind auditing against structured reference evidence using a predefined
       error taxonomy.
-              </p>
-              <p>
-                <strong>STATUS</strong>Evaluation framework built. Final calibration panel not yet run.
-              </p>
-            </div>
+    </p>
+  </div>
+
+  <div class="tab-content" id="taxonomy">
+    <p>
+      17 predefined failure modes covering commission and omission errors.
+    </p>
+  </div>
+
+  <div class="tab-content" id="status">
+    <p>
+      Evaluation framework built. Final calibration panel not yet run.
+    </p>
+  </div>
+
+</div>
           
             <div class="project-flow">
   <span>STRUCTURED EVIDENCE</span>
