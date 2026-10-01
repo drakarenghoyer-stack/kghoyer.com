@@ -167,6 +167,10 @@ body {
   letter-spacing: 0.1em;
 }
 
+.project-index {
+  color: var(--coral);
+}
+
 .project-card h3 {
   font-size: 36px;
   margin: 32px 0 16px;
