@@ -359,13 +359,15 @@ body {
   flex-direction: column;
   gap: 10px;
   padding: 0 32px 0 0;
+  width: 100%;
+  box-sizing: border-box;
 
   background: none;
   border: none;
   text-align: left;
   cursor: pointer;
   color: inherit;
-}
+  }
 
 .flow-step span {
   color: var(--coral);
