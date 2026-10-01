@@ -339,12 +339,8 @@ body {
   border-top: 1px solid rgba(244, 227, 189, 0.12);
 }
 
-.project-flow div {
+.project-flow .flow-step {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-right: 32px;
 }
 
 .project-flow div:not(:last-child)::after {
@@ -355,6 +351,43 @@ body {
   right: 0;
   height: 1px;
   background: rgba(244, 227, 189, 0.12);
+}
+
+.flow-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 32px 0 0;
+
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
+}
+
+.flow-step span {
+  color: var(--coral);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.flow-step strong {
+  color: var(--teal);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+}
+
+.flow-step:hover strong {
+  color: var(--cream);
+}
+
+.flow-step.active strong {
+  color: var(--cream);
 }
 
 .project-flow span {
