@@ -116,6 +116,8 @@ body {
     text-align: center;
     font-family: "Courier new";
     text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0.08em;
 }
 
 .hero-actions a:hover {
@@ -320,6 +322,8 @@ body {
     text-align: center;
     font-family: "Courier new";
     text-decoration: none;
+  text-transform: none;
+  letter-spacing: 0.08em;
 }
 
 .project-actions a:hover {
@@ -350,7 +354,7 @@ body {
   left: 28px;
   right: 0;
   height: 1px;
-  background: rgba(244, 227, 189, 0.18);
+  background: rgba(244, 227, 189, 0.12);
 }
 
 .project-flow span {
