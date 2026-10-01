@@ -30,6 +30,7 @@ body {
   color: blanchedalmond;
   text-align: center;
 }
+
 a {
   font-size: 12px;
   font-weight: bold;
@@ -44,8 +45,7 @@ a {
   margin-left: 220px;
   margin-right: 220px;
   color: blanchedalmond;
-    text-style: none;
-
+  text-decoration: none;
 }
 
 p {
