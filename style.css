@@ -1,6 +1,6 @@
 img {
-    height: 250;
-    width: 250;
+    width: min(250px, 80vw);
+    height: auto;
     /* border-style: double; */
     border-color: #6568a4;
     border-radius: 300px;
@@ -12,8 +12,10 @@ h1 {
   font-weight: bolder;
   font-family:Zapfino;
   font-size: 18px;
-  margin-left: 30%;
-  margin-right: 30%;
+  width: 90%;
+max-width: 650px;
+margin-left: auto;
+margin-right: auto;
   border-radius: 10px;
   border: #6568a4;
   border-bottom: #0B2236;
