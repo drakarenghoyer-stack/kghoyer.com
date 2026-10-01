@@ -575,6 +575,127 @@ body {
   font-size: 13px;
 }
 
+#status .status-dashboard {
+  margin-top: 8px;
+}
+
+#status .status-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+#status .status-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px 18px;
+  border: 1px solid rgba(244, 227, 189, 0.18);
+  border-radius: 12px;
+}
+
+#status .status-label,
+#status .status-caption,
+#status .status-workstream h4 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+#status .status-label {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+#status .status-metric strong {
+  font-family: "Courier New", Courier, monospace;
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: normal;
+  color: var(--teal);
+}
+
+#status .status-metric small {
+  font-size: 13px;
+}
+
+#status .status-caption {
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+#status .status-pending strong {
+  color: var(--coral);
+}
+
+#status .status-workstreams {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 32px;
+}
+
+#status .status-workstream {
+  padding-top: 20px;
+  border-top: 1px solid rgba(244, 227, 189, 0.18);
+}
+
+#status .status-workstream h4 {
+  margin: 0 0 18px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--teal);
+}
+
+#status .status-next h4 {
+  color: var(--coral);
+}
+
+#status .status-workstream ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#status .status-workstream li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--cream);
+}
+
+#status .status-workstream li::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+#status .status-next li::before {
+  background: var(--coral);
+}
+
+#status .status-footnote {
+  margin: 28px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(244, 227, 189, 0.12);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  #status .status-metrics,
+  #status .status-workstreams {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 700px) {
   .hero {
     padding: 80px 24px;
