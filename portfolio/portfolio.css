@@ -697,6 +697,47 @@ html {
   scroll-margin-top: 32px;
 }
 
+#audit-trace details {
+  margin-top: 18px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+#audit-trace summary {
+  width: fit-content;
+  color: var(--teal);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#audit-trace summary:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 4px;
+}
+
+#audit-trace details p {
+  overflow-wrap: anywhere;
+}
+
+#audit-trace pre {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 18px;
+  border: 1px solid rgba(244, 227, 189, 0.18);
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--cream);
+}
+
+#audit-trace .audit-limitations {
+  max-width: 760px;
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(244, 227, 189, 0.18);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
