@@ -250,63 +250,63 @@
 </div>
               
               <div class="tab-content" id="status">
-    <p>
-      Evaluation framework built. Final calibration panel not yet run.
-    </p>
-  </div>
+  <div class="status-dashboard">
 
+    <div class="status-metrics">
+      <div class="status-metric">
+        <span class="status-label">PIPELINE</span>
+        <strong>Implemented</strong>
+        <span class="status-caption">Generator + auditor</span>
+      </div>
+
+      <div class="status-metric">
+        <span class="status-label">TAXONOMY</span>
+        <strong>17 <small>codes</small></strong>
+        <span class="status-caption">6 commission · 11 omission</span>
+      </div>
+
+      <div class="status-metric status-pending">
+        <span class="status-label">FINAL EVALUATION</span>
+        <strong>Pending</strong>
+        <span class="status-caption">Performance not yet measured</span>
+      </div>
+    </div>
+
+    <div class="status-workstreams">
+      <div class="status-workstream">
+        <h4>Built</h4>
+        <ul>
+          <li>Generator and source-blinded auditor implemented.</li>
+          <li>Structured evidence with field-level traceability.</li>
+          <li>Taxonomy v0.4 and documented annotation rules.</li>
+          <li>Evaluation protocol and development observations.</li>
+        </ul>
+      </div>
+
+      <div class="status-workstream status-next">
+        <h4>Next</h4>
+        <ul>
+          <li>Complete and freeze the human-annotated reference standard.</li>
+          <li>Align and freeze the auditor configuration with the current taxonomy.</li>
+          <li>Execute the final evaluation panel.</li>
+          <li>Measure sensitivity, specificity and run-to-run stability.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="status-footnote">
+      Development observations documented.
+      Final performance metrics not yet available.
+    </p>
+
+  </div>
 </div>
           
               <div class="project-actions">
   <a href="#audit-trace">explore audit ↓</a>
 </div>
           </article>
-          <div class="taxonomy">
-  <div class="taxonomy-header">
-    <div>
-      <p class="case-label">ERROR TAXONOMY / v0.4</p>
-      <h3>Failure modes, defined before evaluation.</h3>
-    </div>
-
-    <span class="taxonomy-count">17 CODES</span>
-  </div>
-
-  <div class="taxonomy-grid">
-
-    <div class="taxonomy-group">
-      <div class="taxonomy-group-header">
-        <span>COMMISSION</span>
-        <span>UNIT: VERIFIABLE CLAIM</span>
-      </div>
-
-      <ul>
-        <li><code>C1</code> Unsupported efficacy claim</li>
-        <li><code>C2</code> Significance misstated</li>
-        <li><code>C3</code> Statistical apparatus displayed</li>
-        <li><code>C4</code> Numeric error</li>
-        <li><code>C5</code> Untested outcome given an effect estimate</li>
-        <li><code>C6</code> Frequency representation</li>
-      </ul>
-    </div>
-
-    <div class="taxonomy-group">
-      <div class="taxonomy-group-header">
-        <span>OMISSION</span>
-        <span>UNIT: REQUIRED ELEMENT</span>
-      </div>
-
-      <ul>
-        <li><code>O1</code> Uncertainty not qualified</li>
-        <li><code>O2–O11</code> Required content absent or incomplete</li>
-      </ul>
-
-      <p class="taxonomy-note">
-        O2–O11 map to the ten required Annex V elements.
-      </p>
-    </div>
-
-  </div>
-</div>
+          
           <div class="evidence-case" id="audit-trace">
   <p class="case-label">AUDIT TRACE / PARAGON-HF</p>
 
