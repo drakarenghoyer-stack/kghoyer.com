@@ -689,6 +689,20 @@ body {
   color: var(--muted);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+#audit-trace {
+  scroll-margin-top: 32px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 @media (max-width: 600px) {
   #status .status-metrics,
   #status .status-workstreams {
