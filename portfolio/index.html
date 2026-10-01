@@ -82,13 +82,58 @@
 
   <div class="tab-content" id="taxonomy">
   <p>
-    17 predefined failure modes covering commission and omission errors.
+    17 predefined failure modes covering unsupported or distorted
+    claims and missing required information.
   </p>
 
-  <div class="taxonomy-summary">
-    <span>COMMISSION</span>
-    <span>OMISSION</span>
+  <div class="taxonomy-grid">
+
+    <div class="taxonomy-group">
+      <div class="taxonomy-group-header">
+        <span>COMMISSION</span>
+        <span>6 codes · Verifiable claim</span>
+      </div>
+
+      <ul>
+        <li><code>C1</code> Unsupported efficacy claim.</li>
+        <li><code>C2</code> Significance or reliability misstated.</li>
+        <li><code>C3</code> Confidence intervals, p values or test statistics displayed numerically instead of explained in plain language.</li>
+        <li><code>C4</code> Quantitative statement contradicting the evidence table.</li>
+        <li><code>C5</code> Effect estimate reported for an outcome outside the confirmatory testing sequence, even when qualified.</li>
+        <li><code>C6</code> Adverse event frequency presented as a bare percentage or percentage table without a denominator stated in words at the point of use.</li>
+      </ul>
+    </div>
+
+    <div class="taxonomy-group">
+      <div class="taxonomy-group-header">
+        <span>OMISSION</span>
+        <span>11 codes · Required element</span>
+      </div>
+
+      <ul>
+        <li><code>O1</code> Required uncertainty qualification absent or incomplete.</li>
+        <li><code>O2</code> Trial identification absent or incomplete.</li>
+        <li><code>O3</code> Sponsor name or contact details missing.</li>
+        <li><code>O4</code> Trial location, timing, objectives or rationale missing.</li>
+        <li><code>O5</code> Participant numbers, demographics or eligibility criteria missing.</li>
+        <li><code>O6</code> Investigational medicinal products missing.</li>
+        <li><code>O7</code> Adverse reactions or their frequency missing; a limited source scope must be disclosed.</li>
+        <li><code>O8</code> Overall results missing.</li>
+        <li><code>O9</code> Comments on the outcome missing.</li>
+        <li><code>O10</code> Follow-up trials not indicated.</li>
+        <li><code>O11</code> Where to find additional information missing.</li>
+      </ul>
+    </div>
+
   </div>
+
+  <p class="taxonomy-note">
+    Project-defined taxonomy v0.4, informed by EU CTR Annex V
+    and pinned lay-summary guidance; not an official regulatory
+    classification. Omission codes are scored against the generator
+    only when the required information is available in the evidence
+    table. Extraction gaps are recorded separately.
+  </p>
 </div>
 
   <div class="tab-content" id="status">
