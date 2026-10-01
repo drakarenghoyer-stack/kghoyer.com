@@ -171,6 +171,10 @@ body {
   color: var(--coral);
 }
 
+.project-meta span:last-child {
+  color: var(--teal);
+}
+
 .project-card h3 {
   font-size: 36px;
   margin: 32px 0 16px;
