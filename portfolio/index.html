@@ -246,6 +246,22 @@
       document.getElementById(target).classList.add("active");
     });
   });
+        const flowSteps = document.querySelectorAll(".flow-step");
+  const flowDescriptions = document.querySelectorAll(".flow-description");
+
+  flowSteps.forEach(step => {
+    step.addEventListener("click", () => {
+      const target = step.dataset.step;
+
+      flowSteps.forEach(item => item.classList.remove("active"));
+      flowDescriptions.forEach(item => item.classList.remove("active"));
+
+      step.classList.add("active");
+      document
+        .querySelector(`.flow-description[data-description="${target}"]`)
+        .classList.add("active");
+    });
+  });
 </script>
   </body>
 </html>
