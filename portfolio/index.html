@@ -34,7 +34,7 @@
   </p>
 
   <div class="hero-actions">
-    <a href="#work">VIEW SELECTED WORK ↓</a>
+    <a href="#work">View selected work ↓</a>
     <a href="#">CV ↗</a>
   </div>
 </div>
@@ -118,7 +118,7 @@
 
 </div>
             <div class="project-actions">
-  <a href="#audit-trace">EXPLORE AUDIT ↓</a>
+  <a href="#audit-trace">Explore audit ↓</a>
 </div>
           </article>
           <div class="taxonomy">
@@ -209,5 +209,21 @@
         </section>
       </main>
     <footer></footer>
+    <script>
+  const tabButtons = document.querySelectorAll(".tab-button");
+  const tabContents = document.querySelectorAll(".tab-content");
+
+  tabButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const target = button.dataset.tab;
+
+      tabButtons.forEach(btn => btn.classList.remove("active"));
+      tabContents.forEach(content => content.classList.remove("active"));
+
+      button.classList.add("active");
+      document.getElementById(target).classList.add("active");
+    });
+  });
+</script>
   </body>
 </html>
