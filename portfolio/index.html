@@ -380,6 +380,31 @@
         .classList.add("active");
     });
   });
+      const taxonomy = document.querySelector("#taxonomy");
+const taxonomySteps = taxonomy.querySelectorAll(".taxonomy-step");
+const taxonomyDescriptions = taxonomy.querySelectorAll(
+  ".taxonomy-description"
+);
+
+taxonomySteps.forEach(step => {
+  step.addEventListener("click", () => {
+    const target = step.dataset.code;
+
+    taxonomySteps.forEach(item => {
+      const isActive = item === step;
+
+      item.classList.toggle("active", isActive);
+      item.setAttribute("aria-pressed", String(isActive));
+    });
+
+    taxonomyDescriptions.forEach(description => {
+      const isActive = description.dataset.code === target;
+
+      description.classList.toggle("active", isActive);
+      description.hidden = !isActive;
+    });
+  });
+});
 </script>
   </body>
 </html>
