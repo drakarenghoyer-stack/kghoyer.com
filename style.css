@@ -1,10 +1,10 @@
 img {
-  height: 200px;
-  width: 200px;
-  border-style:double;
-  border-color:  #6568a4;
-  border-radius: 100px;
-  box-shadow: -20px -20px 200px rgba(255, 255, 255, 0.2);
+    height: 250;
+    width: 250;
+    /* border-style: double; */
+    border-color: #6568a4;
+    border-radius: 300px;
+    box-shadow: -20px -20px 200px rgba(255, 255, 255, 0.2);
 }
 
 h1 {
