@@ -58,7 +58,13 @@ body {
 }
 
 .nav-links a:hover {
-  color: var(--purple);
+  color: var(--teal);
+  border-color: var(--teal);
+}
+
+.nav-links a:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 4px;
 }
 
 .hero {
@@ -1036,7 +1042,7 @@ html {
   }
 
   .contact-description {
-    font-size: 17px;
+    font-size: 14px;
   }
 }
   
