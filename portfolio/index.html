@@ -76,9 +76,9 @@
 
   <div class="tab-content active" id="method">
     <p>
-      Blind auditing against structured reference evidence using a predefined
-      error taxonomy.
-    </p>
+  Source-blinded auditing against structured reference evidence,
+  using an error taxonomy prespecified for the evaluation panel.
+</p>
     <div class="project-flow">
 
   <button class="flow-step active" data-step="1">
@@ -104,7 +104,16 @@
 </div>
 
 <div class="flow-description active" data-description="1">
-  Extract published study findings into a field-traceable evidence table.
+  <p>
+    Extract published study findings into a field-traceable
+    evidence table.
+  </p>
+  <p>
+    The generator and auditor share this table. Extraction errors
+    can propagate through both stages without being detected by
+    this pipeline. Source-to-table verification requires a
+    separate check.
+  </p>
 </div>
 
 <div class="flow-description" data-description="2">
@@ -121,7 +130,14 @@
   </div>
 
   <div class="tab-content" id="taxonomy">
-  <p>17 predefined failure modes · Taxonomy v0.4</p>
+  <p>
+  17 failure modes prespecified for the evaluation panel
+  · Taxonomy v0.4
+</p>
+<p class="taxonomy-note">
+  Developed iteratively through guidance review and initial
+  case annotation.
+</p>
 
   <div class="taxonomy-controls">
     <div class="taxonomy-code-group">
@@ -242,13 +258,35 @@
   </div>
 
   <p class="taxonomy-note">
-    Project-defined interpretation of EU CTR Annex V and pinned
-    lay-summary guidance; not an official regulatory classification.
-    Omission codes are scored against the generator only where the
-    evidence table carries the required information. Extraction gaps
-    are recorded separately.
-  </p>
-</div>
+  The taxonomy is a project-defined interpretation of the
+  sources below, not an official classification of any
+  regulatory authority. Omission codes are scored against
+  the generator only where the evidence table carries the
+  required information. Extraction gaps are recorded separately.
+</p>
+
+<details>
+  <summary>Sources and versions fixed in the protocol</summary>
+  <ul>
+    <li>Regulation (EU) 536/2014, Annex V.</li>
+    <li>
+      CTR Questions &amp; Answers, July 2026,
+      chapter 6 (§6.1 and §6.2).
+    </li>
+    <li>
+      Summaries of Clinical Trial Results for Laypersons,
+      Expert Group on Clinical Trials,
+      version 2, February 2018.
+    </li>
+    <li>
+      Good Lay Summary Practice, version 1, October 2021:
+      §3.4 and §3.3.6 (statistical terminology);
+      §3.3.8 (quality control);
+      §2.2.1 and §2.2.2 (outcome selection).
+    </li>
+  </ul>
+</details>
+  </div>
               
               <div class="tab-content" id="status">
   <div class="status-dashboard">
@@ -257,7 +295,9 @@
       <div class="status-metric">
         <span class="status-label">PIPELINE</span>
         <strong>Implemented</strong>
-        <span class="status-caption">Generator + auditor</span>
+        <span class="status-caption">
+  Generator + auditor · 6 of 17 codes supported
+</span>
       </div>
 
       <div class="status-metric">
@@ -288,7 +328,10 @@
         <h4>Next</h4>
         <ul>
           <li>Complete and freeze the human-annotated reference standard.</li>
-          <li>Align and freeze the auditor configuration with the current taxonomy.</li>
+          <li>
+  Extend auditor coverage from 6 to 17 codes, then verify
+  alignment and freeze the configuration.
+</li>
           <li>Execute the final evaluation panel.</li>
           <li>Measure sensitivity, specificity and run-to-run stability.</li>
         </ul>
@@ -296,9 +339,10 @@
     </div>
 
     <p class="status-footnote">
-      Development observations documented.
-      Final performance metrics not yet available.
-    </p>
+  Supported auditor codes: C1–C5 and O1.
+  Development observations documented.
+  Final performance metrics not yet available.
+</p>
 
   </div>
 </div>
