@@ -905,5 +905,68 @@ html {
   #status .status-workstreams {
     grid-template-columns: 1fr;
   }
+
+    .background {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px 100px;
+  scroll-margin-top: 32px;
+}
+
+.background h2 {
+  max-width: 800px;
+  margin: 20px 0 32px;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.15;
+}
+
+.background-intro {
+  max-width: 760px;
+}
+
+.background-intro p {
+  margin: 0 0 20px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.background-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.background-grid article {
+  border-top: 2px solid var(--coral);
+  padding-top: 24px;
+}
+
+.background-grid h3 {
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+.background-grid p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+@media (max-width: 800px) {
+  .background {
+    padding: 48px 24px 72px;
+  }
+
+  .background-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 32px;
+  }
+
+  .background-intro p {
+    font-size: 17px;
+  }
+}
 }
 }
