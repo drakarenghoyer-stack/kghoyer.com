@@ -814,4 +814,96 @@ html {
   .project-flow {
   grid-template-columns: 1fr 1fr;
 }
+
+  @media (max-width: 800px) {
+  .site-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .nav-brand {
+    white-space: nowrap;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 16px 24px;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+    padding: 48px 24px;
+  }
+
+  .hero-main,
+  .hero-context {
+    min-width: 0;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 8vw, 48px);
+    line-height: 1.12;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    font-size: 17px;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .hero-actions a {
+    padding: 12px 18px;
+  }
+
+  .hero-context {
+    padding-top: 24px;
+  }
+
+  .work {
+    padding: 48px 24px 80px;
+  }
+
+  .work h2 {
+    font-size: 36px;
+  }
+
+  .project-card {
+    padding: 24px 20px;
+  }
+
+  .project-meta {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .project-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 16px;
+  }
+
+  .flow-step {
+    padding-right: 0;
+  }
+
+  .tab-buttons {
+    gap: 20px;
+  }
+
+  .audit-step {
+    padding: 20px;
+  }
+
+  #status .status-metrics,
+  #status .status-workstreams {
+    grid-template-columns: 1fr;
+  }
+}
 }
