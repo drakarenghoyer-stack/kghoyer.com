@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Understanding High Blood Pressure — KG Hoyer</title>
+
+  <meta name="description"
+        content="An independent patient-education sample explaining blood pressure, practical steps and when to seek help.">
+
+  <link rel="icon" type="image/png" href="/favicon-v8.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap"
+        rel="stylesheet">
+
+  <style>
+    :root {
+      --paper: #f7f5ef;
+      --cream: #fcf0cc;
+      --ink: #0b2236;
+      --muted: #506372;
+      --purple: #6568a4;
+      --purple-text: #4d5088;
+      --teal: #5fc8bd;
+      --mint: #a5ded1;
+      --coral: #f67a5f;
+      --red: #a6453e;
+      --line: #d9dfdc;
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 26px;
+    }
+
+    a {
+      color: var(--purple-text);
+      text-underline-offset: 4px;
+      overflow-wrap: anywhere;
+    }
+
+    a:hover {
+      color: #286f69;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--purple);
+      outline-offset: 4px;
+    }
+
+    .eyebrow,
+    .sample-bar,
+    .byline,
+    .lab,
+    .cap,
+    .lever .n,
+    .callout .label,
+    .sig,
+    .back {
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    /* TOP BANNER */
+
+    .sample-bar {
+      padding: 10px 16px;
+      background: var(--ink);
+      color: var(--paper);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .sample-bar a {
+      color: var(--cream);
+    }
+
+    .sample-bar a:hover {
+      color: var(--teal);
+    }
+
+    /* COMPACT HEADER */
+
+    header.head {
+      padding: 64px 0 30px;
+    }
+
+    .eyebrow {
+      display: block;
+      margin-bottom: 20px;
+      color: var(--purple-text);
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    .lever h3 {
+      font-family: "Fraunces", "Times New Roman", serif;
+      font-weight: 500;
+    }
+
+    h1 {
+      max-width: 18ch;
+      font-size: clamp(34px, 6vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -0.015em;
+    }
+
+    .standfirst {
+      max-width: 56ch;
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 19px);
+    }
+
+    .byline {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 26px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.03em;
+    }
+
+    /* READING */
+
+    main {
+      padding: 18px 0 40px;
+    }
+
+    h2 {
+      margin: 46px 0 14px;
+      font-size: clamp(24px, 3vw, 31px);
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+
+    .lab {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--purple-text);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 17px;
+    }
+
+    .lead-p {
+      font-size: 18px;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    /* BLOOD PRESSURE TABLE */
+
+    .scale {
+      margin: 26px 0;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+
+    .cap {
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .table-scroll {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      min-width: 540px;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    caption {
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-family: "Courier New", Courier, monospace;
+      font-size: 12px;
+      text-align: left;
+    }
+
+    th,
+    td {
+      padding: 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    thead th {
+      background: var(--ink);
+      color: var(--cream);
+      font-family: "Courier New", Courier, monospace;
+      font-weight: normal;
+    }
+
+    tbody th {
+      font-weight: 600;
+    }
+
+    tbody tr:nth-child(even) {
+      background: rgba(165, 222, 209, 0.2);
+    }
+
+    .scale .note {
+      margin: 18px 0 0;
+      padding-top: 14px;
+      border-top: 1px dashed var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* ACTION CARDS */
+
+    .levers {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin: 24px 0;
+    }
+
+    .lever {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--teal);
+      border-radius: 12px;
+      background: var(--paper);
+    }
+
+    .lever:nth-child(3n + 2) {
+      border-top-color: var(--coral);
+    }
+
+    .lever:nth-child(3n) {
+      border-top-color: var(--purple);
+    }
+
+    .lever .n {
+      display: block;
+      margin-bottom: 9px;
+      color: var(--purple-text);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+    }
+
+    .lever h3 {
+      margin-bottom: 6px;
+      font-size: 19px;
+      line-height: 1.3;
+    }
+
+    .lever p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* CALLOUTS */
+
+    .callout {
+      margin: 26px 0;
+      padding: 20px 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .callout .label {
+      margin-bottom: 10px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .callout p {
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+
+    .callout p + p {
+      margin-top: 12px;
+    }
+
+    .c-mint {
+      border-left: 3px solid var(--teal);
+      background: rgba(165, 222, 209, 0.25);
+    }
+
+    .c-cream {
+      border-left: 3px solid var(--coral);
+      background: rgba(252, 240, 204, 0.55);
+    }
+
+    .c-mint .label,
+    .c-cream .label {
+      color: var(--purple-text);
+    }
+
+    .c-red {
+      border-left: 3px solid var(--red);
+      background: rgba(246, 122, 95, 0.12);
+    }
+
+    .c-red .label {
+      color: var(--red);
+    }
+
+    /* SOURCES */
+
+    .source-note {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .sources ol {
+      padding-left: 22px;
+    }
+
+    .sources li {
+      margin-bottom: 18px;
+      padding-left: 5px;
+      font-size: 14px;
+      scroll-margin-top: 24px;
+    }
+
+    .sources small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      margin-top: 48px;
+      padding: 34px 0 64px;
+      border-top: 1px solid var(--line);
+    }
+
+    footer p {
+      margin-bottom: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer .sig {
+      color: var(--ink);
+      font-size: 12px;
+      letter-spacing: 0.03em;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 500px) {
+      header.head {
+        padding-top: 40px;
+      }
+
+      .levers {
+        grid-template-columns: 1fr;
+      }
+
+      .scale {
+        padding: 16px;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .sample-bar,
+      .back {
+        display: none;
+      }
+
+      .wrap {
+        max-width: none;
+      }
+
+      h2 {
+        break-after: avoid;
+      }
+
+      .lever,
+      .callout,
+      tr {
+        break-inside: avoid;
+      }
+
+      thead th {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sample-bar">
+    Writing sample · patient education ·
+    <a href="/portfolio/">back to portfolio</a>
+  </div>
+
+  <header class="head">
+    <div class="wrap">
+      <span class="eyebrow">
+        Patient education · English sample
+      </span>
+
+      <h1>Understanding high blood pressure</h1>
+
+      <p class="standfirst">
+        It usually causes no symptoms, which is exactly why
+        it deserves your attention. Here is what the numbers
+        mean and what you can do.
+      </p>
+
+      <div class="byline">
+        <span>Written by Karen Guimarães Hoyer, MD</span>
+        <span>Sources checked · 2 October 2026</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <p class="lead-p">
+        Blood pressure is the force of blood pushing against
+        the walls of your arteries. When it stays too high
+        over time, it puts extra strain on your heart,
+        blood vessels and other organs.
+      </p>
+
+      <p>
+        Your clinician may call high blood pressure
+        <strong>hypertension</strong>. It often develops
+        without noticeable symptoms. Measuring it is how
+        you find out whether it is high.
+      </p>
+
+      <h2>
+        <span class="lab">The numbers</span>
+        What your reading means
+      </h2>
+
+      <p>
+        A reading has two numbers — for example,
+        <strong>120/80</strong>. The top number measures
+        pressure when your heart beats. The bottom number
+        measures pressure between beats. Both matter.
+      </p>
+
+      <div class="scale">
+        <div class="cap">
+          US adult blood pressure categories · mmHg
+        </div>
+
+        <div class="table-scroll">
+          <table>
+            <caption>
+              American Heart Association classification
+            </caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Top number</th>
+                <th scope="col">And / or</th>
+                <th scope="col">Bottom number</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">Normal</th>
+                <td>Below 120</td>
+                <td>and</td>
+                <td>Below 80</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Elevated</th>
+                <td>120–129</td>
+                <td>and</td>
+                <td>Below 80</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Stage 1</th>
+                <td>130–139</td>
+                <td>or</td>
+                <td>80–89</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Stage 2</th>
+                <td>140 or above</td>
+                <td>or</td>
+                <td>90 or above</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Severely high</th>
+                <td>Above 180</td>
+                <td>and/or</td>
+                <td>Above 120</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="note">
+          If the numbers fall into different categories,
+          use the higher category. These are US categories;
+          other guidelines use different thresholds.
+          A clinician confirms the diagnosis from repeated
+          measurements. See the action steps below for
+          severely high readings.
+          <a href="#source-1">Source 1</a>.
+        </p>
+      </div>
+
+      <div class="callout c-mint">
+        <div class="label">
+          Make your home reading more reliable
+        </div>
+
+        <p>
+          Use a validated upper-arm monitor with a cuff
+          that fits. Rest quietly for five minutes,
+          support your arm at heart level and avoid talking.
+          Take two readings one minute apart and record them.
+          <a href="#source-6">Source 6</a>.
+        </p>
+      </div>
+
+      <h2>
+        <span class="lab">Why it matters</span>
+        The quiet damage
+      </h2>
+
+      <p>
+        Over time, high blood pressure can increase the risk
+        of heart attack, stroke, heart failure, kidney damage
+        and problems with vision. Lowering it helps reduce
+        these risks, even when you feel well.
+      </p>
+
+      <h2>
+        <span class="lab">What you can do</span>
+        Practical steps that help
+      </h2>
+
+      <p>
+        Everyday habits can help lower blood pressure and
+        protect your heart. Their effects vary, and some
+        people also need medication. Choose a manageable
+        first step and build from there.
+      </p>
+
+      <div class="levers">
+        <div class="lever">
+          <span class="n">01</span>
+          <h3>Ease up on salt</h3>
+          <p>
+            Check salt or sodium on food labels. Choose
+            lower-salt options and use less salt when cooking.
+          </p>
+        </div>
+
+        <div class="lever">
+          <span class="n">02</span>
+          <h3>Eat more plants</h3>
+          <p>
+            Build meals around vegetables, fruit, whole
+            grains and beans. The overall eating pattern matters.
+          </p>
+        </div>
+
+        <div class="lever">
+          <span class="n">03</span>
+          <h3>Move regularly</h3>
+          <p>
+            Build towards at least 150 minutes of moderate
+            activity a week, as appropriate for your health.
+            Walking is one option.
+          </p>
+        </div>
+
+        <div class="lever">
+          <span class="n">04</span>
+          <h3>Mind alcohol</h3>
+          <p>
+            Limit or avoid alcohol. Ask your clinician how
+            drinking affects your blood pressure and treatment.
+          </p>
+        </div>
+
+        <div class="lever">
+          <span class="n">05</span>
+          <h3>Manage stress</h3>
+          <p>
+            Make time for rest and manageable ways to reduce
+            stress. Ask for support when stress feels difficult
+            to manage.
+          </p>
+        </div>
+
+        <div class="lever">
+          <span class="n">06</span>
+          <h3>Get help to stop smoking</h3>
+          <p>
+            Stopping smoking protects your heart and blood
+            vessels. Support can make quitting easier.
+          </p>
+        </div>
+      </div>
+
+      <p class="source-note">
+        Lifestyle sources:
+        <a href="#source-3">3</a>,
+        <a href="#source-4">4</a> and
+        <a href="#source-5">5</a>.
+      </p>
+
+      <h2>
+        <span class="lab">Medication</span>
+        If your clinician prescribes it
+      </h2>
+
+      <p>
+        Medication may be recommended because of your
+        readings, your overall health risk or the response
+        to lifestyle changes. It is another way to protect
+        your health.
+      </p>
+
+      <div class="callout c-cream">
+        <div class="label">
+          Two things that matter most
+        </div>
+
+        <p>
+          Take your medicine as prescribed, even when you
+          feel fine. Do not stop it or change the dose on
+          your own. If you notice side effects, speak with
+          your clinician about the options.
+          <a href="#source-6">Source 6</a>.
+        </p>
+      </div>
+
+      <h2>
+        <span class="lab">Red flags</span>
+        When to get help
+      </h2>
+
+      <div class="callout c-cream">
+        <div class="label">
+          Very high reading, but no concerning symptoms
+        </div>
+
+        <p>
+          If the top number is above <strong>180</strong>
+          or the bottom number is above <strong>120</strong>,
+          wait at least one minute and measure again.
+          If it stays this high and you have no new
+          concerning symptoms, contact a healthcare
+          professional as soon as possible. Do not change
+          your medication dose yourself.
+          <a href="#source-2">Source 2</a>.
+        </p>
+      </div>
+
+      <div class="callout c-red">
+        <div class="label">
+          Very high reading with concerning symptoms
+        </div>
+
+        <p>
+          A reading in this range together with chest pain,
+          breathlessness, sudden weakness, difficulty
+          speaking or changes in vision can be an emergency.
+          Call your local emergency number immediately.
+          Do not wait for the pressure to fall or delay
+          the call to take another reading.
+        </p>
+
+        <p>
+          Sudden chest pain or signs of a stroke also need
+          emergency help even if you do not know your
+          blood pressure.
+          <a href="#source-2">Source 2</a>;
+          <a href="#source-3">Source 3</a>.
+        </p>
+      </div>
+
+      <h2>
+        <span class="lab">The takeaway</span>
+        One thing to remember
+      </h2>
+
+      <p>
+        High blood pressure often causes no symptoms,
+        so measuring it matters. Know your readings,
+        choose a manageable health habit and agree a
+        treatment plan with your clinician. Your target
+        and treatment should fit your health needs.
+      </p>
+
+      <section class="sources" aria-labelledby="sources-title">
+        <h2 id="sources-title">
+          <span class="lab">Evidence you can follow</span>
+          Sources
+        </h2>
+
+        <p class="source-note">
+          Official patient-information resources checked
+          on 2 October 2026. The categories above follow
+          the American Heart Association, not a universal
+          international classification.
+        </p>
+
+        <ol>
+          <li id="source-1">
+            <a href="https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings">
+              American Heart Association —
+              Understanding Blood Pressure Readings
+            </a>
+            <small>Categories and interpretation.</small>
+          </li>
+
+          <li id="source-2">
+            <a href="https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings/when-to-call-911-for-high-blood-pressure">
+              American Heart Association —
+              When To Call 911 About High Blood Pressure
+            </a>
+            <small>
+              Severely high readings and emergency symptoms.
+            </small>
+          </li>
+
+          <li id="source-3">
+            <a href="https://www.nhs.uk/conditions/high-blood-pressure/">
+              NHS — High blood pressure
+            </a>
+            <small>
+              Symptoms, health risks, diagnosis and treatment.
+            </small>
+          </li>
+
+          <li id="source-4">
+            <a href="https://www.heart.org/en/health-topics/high-blood-pressure/changes-you-can-make-to-manage-high-blood-pressure">
+              American Heart Association —
+              How to Manage High Blood Pressure
+            </a>
+            <small>
+              Lifestyle support and working with your
+              healthcare team.
+            </small>
+          </li>
+
+          <li id="source-5">
+            <a href="https://www.heart.org/en/health-topics/high-blood-pressure/changes-you-can-make-to-manage-high-blood-pressure/managing-blood-pressure-with-a-heart-healthy-diet">
+              American Heart Association —
+              Managing Blood Pressure with a Heart-Healthy Diet
+            </a>
+            <small>Food choices and salt.</small>
+          </li>
+
+          <li id="source-6">
+            <a href="https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings/monitoring-your-blood-pressure-at-home">
+              American Heart Association —
+              Home Blood Pressure Monitoring
+            </a>
+            <small>
+              Measurement technique and continuing
+              prescribed medication.
+            </small>
+          </li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p class="sig">
+        Patient-education writing sample —
+        Karen Guimarães Hoyer, MD
+      </p>
+
+      <p>
+        Independent portfolio sample demonstrating clinical
+        writing and information design. This is general
+        health information, not personal medical advice.
+        The categories and very-high-reading advice are
+        for adults who are not pregnant. Pregnancy and
+        children require different assessment. Individual
+        targets vary. No affiliation with the organisations cited.
+      </p>
+
+      <a class="back" href="/portfolio/">
+        ← Back to portfolio
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
