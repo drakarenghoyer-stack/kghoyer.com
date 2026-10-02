@@ -4,20 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Obesity Explained — Karen Guimarães Hoyer</title>
+  <title>Obesity Explained — KG Hoyer</title>
 
   <meta name="description"
-        content="A plain-language explanation of obesity and its treatments, with scientific and regulatory sources.">
+        content="A plain-language guide to obesity, treatment options and ongoing support.">
 
   <link rel="icon" type="image/png" href="/favicon-v8.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect"
-      href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap"
-      rel="stylesheet">
-  
   <style>
     :root {
       --ink: #0b2236;
@@ -28,15 +21,11 @@
       --mint: #a5ded1;
       --coral: #f67a5f;
       --muted: #506372;
-      --line: #d9dfdc;
+      --line: rgba(11, 34, 54, 0.18);
     }
 
     * {
       box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
     }
 
     body {
@@ -44,23 +33,141 @@
       background: var(--paper);
       color: var(--ink);
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 17px;
+      font-size: 16px;
       line-height: 1.75;
     }
 
-    p {
+    .sheet {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .masthead {
+      padding: 40px 48px 44px;
+    }
+
+    .masthead-top {
+      padding-bottom: 24px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .mast-brand,
+    .eyebrow,
+    .byline,
+    .chip,
+    .sec-num,
+    .note-k,
+    .rf-k,
+    .ai-badge {
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .mast-brand {
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    .mast-brand b {
+      color: var(--ink);
+    }
+
+    .eyebrow {
       margin: 0 0 20px;
+      color: var(--purple);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
     h1,
-    h2,
-    h3 {
-      margin-top: 0;
+    h2 {
       font-family: "Times New Roman", Times, serif;
     }
 
+    h1 {
+      margin: 0 0 24px;
+      font-size: clamp(40px, 6vw, 64px);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      max-width: 65ch;
+      margin: 0 0 24px;
+      font-size: 19px;
+      line-height: 1.6;
+    }
+
+    .byline {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .metastrip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .chip {
+      padding: 8px 12px;
+      border: 1px solid var(--purple);
+      border-radius: 10px;
+      font-size: 12px;
+    }
+
+    .chip b {
+      color: var(--purple);
+    }
+
+    .body {
+      padding: 0 48px 32px;
+    }
+
+    .block {
+      padding: 32px 0 10px;
+      border-top: 1px solid var(--line);
+    }
+
+    .block:first-child {
+      border-top: 2px solid var(--coral);
+    }
+
+    .sec-head {
+      display: flex;
+      align-items: baseline;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .sec-num {
+      flex: none;
+      color: var(--purple);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0 0 18px;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
     a {
-      color: #4d5088;
+      color: var(--purple);
       text-underline-offset: 5px;
       overflow-wrap: anywhere;
     }
@@ -69,1427 +176,506 @@
       color: #286f69;
     }
 
-    a:focus-visible,
-    summary:focus-visible {
+    a:focus-visible {
       outline: 2px solid var(--purple);
       outline-offset: 5px;
     }
 
-    .container {
-      width: min(1120px, calc(100% - 48px));
-      margin: auto;
+    .facts {
+      margin: 0 0 20px;
+      padding: 0;
+      list-style: none;
     }
 
-    .reading {
-      width: min(760px, calc(100% - 48px));
-      margin: auto;
+    .facts li {
+      position: relative;
+      padding: 12px 0 12px 22px;
+      border-bottom: 1px solid var(--line);
     }
 
-    /* HEADER */
-
-    header {
-      background: var(--ink);
-      color: var(--paper);
+    .facts li:last-child {
+      border-bottom: 0;
     }
 
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-      padding: 24px 0;
-      border-bottom: 1px solid rgba(247, 245, 239, 0.2);
+    .facts li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 23px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--purple);
     }
 
-    .wordmark {
-      color: var(--cream);
-      font-family: "Courier New", Courier, monospace;
-      font-size: 14px;
-      text-decoration: none;
+    .note {
+      margin: 20px 0;
+      padding: 20px 24px;
+      border-left: 3px solid var(--teal);
+      border-radius: 0 12px 12px 0;
+      background: rgba(165, 222, 209, 0.3);
     }
 
-    .back {
-      color: var(--paper);
-      font-family: "Courier New", Courier, monospace;
+    .note-k {
+      margin-bottom: 12px;
+      color: var(--purple);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .note p {
+      margin: 0;
+    }
+
+    .caveat {
+      margin: 20px 0;
+      padding: 18px 22px;
+      border-left: 3px solid var(--coral);
+      border-radius: 0 10px 10px 0;
+      background: rgba(246, 122, 95, 0.12);
+    }
+
+    .regfooter {
+      padding: 32px 48px 48px;
+      border-top: 2px solid var(--coral);
+      color: var(--muted);
       font-size: 13px;
-      text-decoration: none;
+      line-height: 1.7;
     }
 
-    header a:hover,
-    footer a:hover {
-      color: var(--teal);
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns:
-        minmax(0, 1.35fr) minmax(250px, 0.65fr);
-      gap: 48px;
-      padding: 64px 0;
-      align-items: end;
-    }
-
-    .eyebrow,
-    .meta span,
-    .toc-title,
-    .trial .label,
-    .method b {
-      font-family: "Courier New", Courier, monospace;
-    }
-
-    .eyebrow {
-      color: var(--teal);
+    .rf-k {
+      color: var(--purple);
       font-size: 12px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
     }
 
-    .hero h1 {
-      margin: 16px 0 24px;
-      color: var(--cream);
-      font-size: clamp(44px, 7vw, 80px);
-      font-weight: normal;
-      line-height: 1.05;
-    }
-
-    .hero h1::after {
-      content: "";
-      display: block;
-      width: 64px;
-      height: 3px;
-      margin-top: 24px;
-      background: var(--coral);
-    }
-
-    .hero .lead {
-      max-width: 59ch;
-      font-size: 19px;
-      line-height: 1.65;
-    }
-
-    .method {
-      padding-top: 24px;
-      border-top: 2px solid var(--coral);
-      color: #a4b5c2;
-      font-size: 15px;
-    }
-
-    .method b {
-      display: block;
-      margin-bottom: 12px;
-      color: var(--cream);
-      font-size: 13px;
-    }
-
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 28px;
-    }
-
-    .meta span {
-      padding: 6px 10px;
+    .ai-badge {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 7px 12px;
       border: 1px solid var(--purple);
-      border-radius: 8px;
-      color: var(--paper);
+      border-radius: 10px;
+      color: var(--purple);
       font-size: 11px;
     }
 
-    /* ARTICLE AND SIDE INDEX */
-
-    .article-shell {
-      display: grid;
-      grid-template-columns: 210px minmax(0, 760px);
-      justify-content: center;
-      align-items: start;
-      gap: 56px;
+    .source-list {
+      margin: 0 0 24px;
+      padding-left: 20px;
     }
 
-    .toc {
-      position: sticky;
-      top: 24px;
-      margin-top: 64px;
+    .source-list li {
+      margin-bottom: 12px;
+      scroll-margin-top: 24px;
+    }
+
+    .disclaim {
+      margin-top: 24px;
       padding-top: 18px;
-      border-top: 2px solid var(--coral);
-    }
-
-    .toc-title {
-      margin: 0 0 12px;
-      color: #4d5088;
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .toc nav {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .toc a {
-      padding: 9px 5px 9px 14px;
-      border-left: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.4;
-      text-decoration: none;
-    }
-
-    .toc a:hover,
-    .toc a[aria-current="true"] {
-      padding-left: 12px;
-      border-left: 3px solid var(--purple);
-      color: #4d5088;
-    }
-
-    .toc .toc-top {
-      margin-top: 12px;
-    }
-
-    article.reading {
-      width: auto;
-      min-width: 0;
-      margin: 0;
-      padding: 64px 0;
-    }
-
-    /* PLAIN-LANGUAGE OPENING */
-
-    .plain-language-intro {
-      margin-bottom: 40px;
-      padding: 28px;
-      border-top: 3px solid var(--teal);
-      border-radius: 0 0 12px 12px;
-      background: rgba(165, 222, 209, 0.2);
-    }
-
-    .plain-language-intro h2 {
-      margin-bottom: 16px;
-      font-size: 30px;
-      line-height: 1.2;
-    }
-
-    .plain-language-intro p:last-child {
-      margin-bottom: 0;
-    }
-
-    .standfirst {
-      margin-bottom: 28px;
-      font-family: "Times New Roman", Times, serif;
-      font-size: 26px;
-      line-height: 1.45;
-    }
-
-    /* SECTIONS */
-
-    .section {
-      padding: 40px 0;
-      border-top: 1px solid var(--line);
-      scroll-margin-top: 28px;
-    }
-
-    .section h2,
-    .central h2 {
-      margin-bottom: 24px;
-      font-size: clamp(28px, 4vw, 38px);
-      font-weight: normal;
-      line-height: 1.2;
-    }
-
-    .section h2::after {
-      content: "";
-      display: block;
-      width: 42px;
-      height: 3px;
-      margin-top: 16px;
-      background: var(--coral);
-    }
-
-    .callout {
-      margin: 28px 0;
-      padding: 24px;
-      border-left: 3px solid var(--teal);
-      border-radius: 0 10px 10px 0;
-      background: rgba(165, 222, 209, 0.25);
-    }
-
-    .callout p {
-      margin: 0;
-    }
-
-    .callout b {
-      color: var(--ink);
-    }
-
-    /* STUDY CARDS */
-
-    .trial-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin: 28px 0;
-    }
-
-    .trial {
-      padding: 24px;
-      border: 1px solid var(--line);
-      border-top: 3px solid var(--purple);
-      border-radius: 0 0 10px 10px;
-    }
-
-    .trial .label {
-      color: #4d5088;
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .trial b {
-      display: block;
-      margin: 14px 0 12px;
-      font-family: "Times New Roman", Times, serif;
-      font-size: 34px;
-      line-height: 1.15;
-    }
-
-    .trial p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-      line-height: 1.65;
-    }
-
-    .caution {
-      margin: 28px 0;
-      padding: 24px;
-      border-left: 3px solid var(--coral);
-      border-radius: 0 10px 10px 0;
-      background: rgba(246, 122, 95, 0.1);
-    }
-
-    .caution strong {
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    .outcome {
-      display: grid;
-      grid-template-columns: 150px 1fr;
-      gap: 28px;
-      margin: 28px 0;
-      padding: 24px 0;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .outcome .number {
-      color: var(--ink);
-      font-family: "Times New Roman", Times, serif;
-      font-size: 40px;
-      line-height: 1.1;
-    }
-
-    .outcome .number small {
-      display: block;
-      margin-top: 10px;
-      color: var(--muted);
-      font-family: "Courier New", Courier, monospace;
-      font-size: 13px;
-    }
-
-    .outcome p {
-      margin: 0;
-    }
-
-    /* CENTRAL MESSAGE */
-
-    .central {
-      margin-top: 32px;
-      padding: 36px;
-      border-top: 4px solid var(--coral);
-      border-radius: 0 0 12px 12px;
-      background: var(--ink);
-      color: var(--paper);
-      scroll-margin-top: 28px;
-    }
-
-    .central h2 {
-      color: var(--cream);
-    }
-
-    .central p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* SOURCES */
-
-    .references {
-      padding: 56px 0;
-      border-top: 1px solid var(--line);
-      background: var(--paper);
-      scroll-margin-top: 28px;
-    }
-
-    .references h2 {
-      font-size: 36px;
-      line-height: 1.2;
-    }
-
-    .references > div > p {
-      color: var(--muted);
-    }
-
-    details {
       border-top: 1px solid var(--line);
     }
 
-    details:last-of-type {
-      border-bottom: 1px solid var(--line);
-    }
-
-    summary {
-      padding: 20px 4px;
-      color: #4d5088;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .refs {
-      margin: 0;
-      padding: 0 0 24px 24px;
-    }
-
-    .refs li {
-      margin-bottom: 16px;
-      padding-left: 5px;
-      font-size: 14px;
-      overflow-wrap: anywhere;
-    }
-
-    /* FOOTER */
-
-    footer {
-      padding: 36px 0;
-      background: var(--ink);
-      color: var(--paper);
-    }
-
-    .footergrid {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .footergrid p {
-      margin: 0;
-      color: #a4b5c2;
-      font-size: 13px;
-    }
-
-    .footergrid a {
-      color: var(--coral);
-      font-family: "Courier New", Courier, monospace;
-      font-size: 14px;
-    }
-
-    /* TABLET AND MOBILE INDEX */
-
-    @media (max-width: 900px) {
-      .article-shell {
-        display: block;
+    @media (max-width: 620px) {
+      .masthead {
+        padding: 28px 24px 32px;
       }
 
-      .toc {
-        position: sticky;
-        z-index: 10;
-        top: 0;
-        margin: 0;
-        padding: 0;
-        border-top: 0;
-        border-bottom: 1px solid var(--line);
-        background: var(--paper);
+      .masthead-top {
+        margin-bottom: 28px;
       }
 
-      .toc-title {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        clip-path: inset(50%);
+      .body {
+        padding: 0 24px 24px;
       }
 
-      .toc nav {
-        flex-direction: row;
-        overflow-x: auto;
+      .regfooter {
+        padding: 28px 24px 36px;
       }
 
-      .toc a {
-        flex: 0 0 auto;
-        padding: 14px 12px;
-        border-left: 0;
-        border-bottom: 2px solid transparent;
-        font-size: 13px;
-        white-space: nowrap;
+      .subtitle {
+        font-size: 17px;
       }
 
-      .toc a:hover,
-      .toc a[aria-current="true"] {
-        padding-left: 12px;
-        border-left: 0;
-        border-bottom-color: var(--purple);
+      h2 {
+        font-size: 26px;
       }
 
-      .toc .toc-top {
-        display: none;
+      .sec-head {
+        gap: 12px;
       }
 
-      article.reading {
-        max-width: 760px;
-        margin: auto;
-        padding: 40px 0 56px;
-      }
-
-      .section,
-      .central,
-      .references {
-        scroll-margin-top: 70px;
+      .note {
+        padding: 18px;
       }
     }
-
-    @media (max-width: 760px) {
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        padding: 48px 0;
-      }
-
-      .trial-grid,
-      .outcome {
-        grid-template-columns: 1fr;
-      }
-
-      .outcome {
-        gap: 16px;
-      }
-
-      .central,
-      .plain-language-intro {
-        padding: 24px;
-      }
-
-      .footergrid {
-        display: block;
-      }
-
-      .footergrid a {
-        display: inline-block;
-        margin-top: 20px;
-      }
-    }
-
-    @media (max-width: 420px) {
-      .container,
-      .reading {
-        width: calc(100% - 32px);
-      }
-
-      .topbar {
-        display: block;
-      }
-
-      .back {
-        display: inline-block;
-        margin-top: 12px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-    }
-
-    /* PRINT */
 
     @media print {
       body {
         background: white;
-        font-size: 11pt;
       }
 
-      .toc,
-      .back,
-      .meta,
-      footer {
-        display: none;
+      .sheet {
+        max-width: none;
       }
 
-      .article-shell {
-        display: block;
-      }
-
-      .container,
-      .reading {
-        width: 100%;
-      }
-
-      header,
-      .central {
-        background: white;
-        color: var(--ink);
-      }
-
-      .hero h1,
-      .central h2,
-      .method b {
-        color: var(--ink);
-      }
-
-      .hero {
-        display: block;
-        padding: 20px 0;
-      }
-
-      .method {
-        margin-top: 24px;
-        color: var(--muted);
-      }
-
-      article.reading {
-        padding-top: 24px;
-      }
-
-      .section h2 {
+      .sec-head {
         break-after: avoid;
       }
 
-      .trial,
-      .callout,
-      .caution {
+      .note,
+      .caveat {
         break-inside: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
       }
     }
-
-    /* Composição alinhada ao sample de hipertensão */
-
-header {
-  background: var(--paper);
-  color: var(--ink);
-}
-
-.topbar {
-  padding: 20px 0;
-  border-bottom-color: var(--line);
-}
-
-.wordmark {
-  color: var(--ink);
-}
-
-.back {
-  color: #4d5088;
-}
-
-header a:hover {
-  color: #286f69;
-}
-
-.hero {
-  grid-template-columns: 1fr;
-  gap: 24px;
-  padding: 48px 0 36px;
-}
-
-.eyebrow {
-  color: #4d5088;
-}
-
-.hero h1 {
-  max-width: 18ch;
-  margin: 16px 0 20px;
-  color: var(--ink);
-  font-family: "Fraunces", "Times New Roman", serif;
-  font-size: clamp(38px, 6vw, 56px);
-  font-weight: 500;
-  line-height: 1.08;
-  letter-spacing: -0.015em;
-}
-
-.hero h1::after {
-  display: none;
-}
-
-.hero .lead {
-  max-width: 60ch;
-  color: var(--muted);
-  font-size: 18px;
-}
-
-.meta {
-  margin-top: 24px;
-}
-
-.meta span {
-  color: #4d5088;
-  border-color: var(--line);
-}
-
-.method {
-  max-width: 65ch;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.method b {
-  color: #4d5088;
-}
-
-.method p {
-  margin-bottom: 0;
-}
-
-.plain-language-intro h2,
-.section h2,
-.central h2,
-.references h2,
-.standfirst,
-.trial b,
-.outcome .number {
-  font-family: "Fraunces", "Times New Roman", serif;
-  font-weight: 500;
-}
-
-.section h2 {
-  font-size: clamp(26px, 3vw, 32px);
-}
-
-.standfirst {
-  font-size: 24px;
-}
-
-@media (max-width: 760px) {
-  .hero {
-    padding: 36px 0 28px;
-  }
-}
-    
   </style>
 </head>
 
 <body>
-  <header id="top">
-    <div class="container">
+  <main class="sheet">
 
-      <div class="topbar">
-        <a class="wordmark" href="/portfolio/">
-          Karen Guimarães Hoyer, MD
-        </a>
-
-        <a class="back" href="/portfolio/#communication">
-          ← Back to portfolio
-        </a>
+    <header class="masthead">
+      <div class="masthead-top">
+        <span class="mast-brand">
+          <b>K. G. Hoyer</b><br>
+          Medical writing &amp; clinical communication
+        </span>
       </div>
 
-      <div class="hero">
-        <div>
-          <p class="eyebrow">
-            Evidence translation · public-facing brief
-          </p>
-
-          <h1>Obesity Explained</h1>
-
-          <p class="lead">
-            What the evidence shows — and what it does not.
-            A plain-language review of diagnosis, lifestyle
-            support, medicines, metabolic surgery and
-            long-term care.
-          </p>
-
-          <div class="meta">
-            <span>International evidence</span>
-            <span>EU regulatory context</span>
-            <span>Evidence brief · September 2026</span>
-          </div>
-        </div>
-
-        <aside class="method">
-          <b>How this was built</b>
-
-          <p>
-            This brief explains scientific evidence for a
-            general audience. The sources are listed below
-            so readers can explore the studies and regulatory
-            information behind the text.
-          </p>
-        </aside>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <div class="article-shell container">
-
-      <aside class="toc" aria-label="On this page">
-        <p class="toc-title">On this page</p>
-
-        <nav>
-          <a href="#beyond-bmi">Beyond BMI</a>
-          <a href="#lifestyle">Lifestyle support</a>
-          <a href="#medicines">Medicines</a>
-          <a href="#outcomes">Health outcomes</a>
-          <a href="#safety">Safety</a>
-          <a href="#stopping">Stopping treatment</a>
-          <a href="#surgery">Surgery</a>
-          <a href="#central-message">Central message</a>
-          <a href="#references">Sources</a>
-          <a class="toc-top" href="#top">↑ Back to top</a>
-        </nav>
-      </aside>
-
-      <article class="reading">
-
-        <div class="plain-language-intro">
-          <h2>Different treatments offer different benefits.</h2>
-
-          <p>
-            Lifestyle support, medicines and surgery can help
-            manage obesity. The most suitable approach depends
-            on each person’s health, needs and preferences.
-          </p>
-
-          <p>
-            Below, we explain the options, what studies have
-            found and what is still uncertain.
-          </p>
-        </div>
-
-        <p class="standfirst">
-          Obesity is often described as a simple problem of
-          eating too much and moving too little. The evidence
-          tells a more complex story.
-        </p>
-
-        <p>
-          Body weight is influenced by biology, genetics,
-          medicines, mental health, sleep, environment,
-          access to food and many other factors. After weight
-          loss, the body may respond by increasing hunger and
-          reducing energy expenditure, making long-term
-          maintenance difficult. This is one reason obesity
-          is increasingly treated as a chronic, relapsing
-          condition rather than a failure of motivation
-          or willpower.
-        </p>
-
-        <p>
-          Effective treatment exists. However, no single
-          approach is right for everyone, and success should
-          not be measured by weight alone.
-        </p>
-
-        <section class="section" id="beyond-bmi">
-          <h2>Obesity is more than a BMI</h2>
-
-          <p>
-            Body mass index, or BMI, compares weight with
-            height. It is inexpensive and useful for screening
-            large populations, but it cannot directly measure
-            body fat, show where fat is stored or determine
-            how excess body fat is affecting an individual’s
-            health.
-          </p>
-
-          <p>
-            A recent international expert commission proposed
-            assessing obesity through two connected components:
-            evidence of excess body fat and evidence of related
-            health problems or limitations in daily functioning.
-          </p>
-
-          <p>
-            This means that two people with the same BMI may
-            have different health needs. Clinical assessment
-            may include waist measurements, metabolic risk
-            factors, physical function, psychological wellbeing
-            and obesity-related or associated conditions such
-            as type 2 diabetes, cardiovascular disease,
-            obstructive sleep apnoea, gastro-oesophageal reflux
-            disease, osteoarthritis, depression and anxiety.
-            The person’s symptoms, daily functioning and
-            treatment priorities also matter.
-          </p>
-
-          <div class="callout">
-            <p>
-              <b>The useful distinction:</b>
-              BMI remains useful, but it should not be the
-              entire diagnosis.
-            </p>
-          </div>
-        </section>
-
-        <section class="section" id="lifestyle">
-          <h2>
-            Lifestyle support matters — but “try harder”
-            is not treatment
-          </h2>
-
-          <p>
-            Nutrition, physical activity, sleep and behavioural
-            support are important parts of obesity care.
-            Their benefits can extend beyond the number
-            on the scale.
-          </p>
-
-          <p>
-            In the Diabetes Prevention Program, a structured
-            lifestyle intervention reduced the relative risk
-            of developing type 2 diabetes by 58% over
-            approximately three years among adults at high
-            risk. This was an intensive programme with defined
-            goals and ongoing support, not simply brief advice
-            to lose weight.
-          </p>
-
-          <p>
-            Intensive weight management can also produce
-            diabetes remission in selected people. In the
-            DiRECT trial, conducted through primary care
-            practices in the United Kingdom, 46% of participants
-            receiving the intervention reached remission of
-            type 2 diabetes at one year, compared with 4%
-            receiving usual care.
-          </p>
-
-          <div class="caution">
-            <strong>Remission does not mean cure.</strong>
-            Blood glucose can rise again, particularly if
-            weight is regained, and continued medical
-            monitoring remains necessary.
-          </div>
-
-          <p>
-            Lifestyle care should therefore be specific,
-            supportive and adapted to the person’s circumstances.
-            It should not be used to blame people when biology,
-            health conditions, medication effects, cost or
-            environment make weight management difficult.
-          </p>
-        </section>
-
-        <section class="section" id="medicines">
-          <h2>What can newer medicines achieve?</h2>
-
-          <p>
-            Anti-obesity medicines can help regulate appetite,
-            food intake and other biological processes involved
-            in body weight. Semaglutide and tirzepatide are among
-            the newer treatments authorised in the European Union
-            for chronic weight management in eligible adults,
-            alongside dietary and physical-activity support.
-          </p>
-
-          <div class="trial-grid">
-            <div class="trial">
-              <span class="label">STEP 1 · 68 weeks</span>
-              <b>−14.9%</b>
-
-              <p>
-                Mean change with semaglutide 2.4 mg, compared
-                with −2.4% with placebo. Both groups received
-                lifestyle support.
-              </p>
-            </div>
-
-            <div class="trial">
-              <span class="label">SURMOUNT-1 · 72 weeks</span>
-              <b>−15.0% to −20.9%</b>
-
-              <p>
-                Mean change across tirzepatide doses,
-                compared with −3.1% with placebo.
-              </p>
-            </div>
-          </div>
-
-          <p>
-            These figures are group averages, not promises.
-            Some participants lost more, some lost less and
-            some stopped treatment. Results from separate
-            trials should not be treated as a direct ranking
-            because populations, methods and treatment
-            conditions can differ.
-          </p>
-
-          <p>
-            A direct head-to-head trial, SURMOUNT-5,
-            subsequently found greater average weight reduction
-            with tirzepatide than with semaglutide over 72 weeks
-            in adults with obesity who did not have diabetes.
-            Even so, weight change is only one part of treatment
-            selection. Safety, health conditions, treatment goals,
-            personal preference, availability and cost also matter.
-          </p>
-        </section>
-
-        <section class="section" id="outcomes">
-          <h2>Benefits can extend beyond weight loss</h2>
-
-          <p>
-            The strongest evidence does not ask only,
-            “How many kilograms were lost?” It also examines
-            whether treatment improves how people feel,
-            function and live.
-          </p>
-
-          <div class="outcome">
-            <div class="number">
-              6.5%
-              <small>vs 8.0%</small>
-            </div>
-
-            <p>
-              In SELECT, cardiovascular death, non-fatal heart
-              attack or non-fatal stroke occurred in 6.5% of
-              participants receiving semaglutide and 8.0%
-              receiving placebo. Participants had established
-              cardiovascular disease and overweight or obesity,
-              without diabetes.
-            </p>
-          </div>
-
-          <p>
-            This result is clinically important, but it applies
-            to the specific high-risk population studied.
-            It should not be presented as proof that the same
-            cardiovascular benefit exists for everyone
-            using semaglutide.
-          </p>
-
-          <p>
-            In the SURMOUNT-OSA trials, tirzepatide reduced
-            the severity of obstructive sleep apnoea and body
-            weight in adults with obesity and moderate-to-severe
-            sleep apnoea. Weight reduction may also improve
-            gastro-oesophageal reflux symptoms in some people.
-          </p>
-
-          <p>
-            Obesity care should also consider depression,
-            anxiety, binge-eating symptoms and weight stigma.
-            These relationships are complex and often
-            bidirectional. Weight management does not replace
-            psychological care, treatment for eating disorders
-            or condition-specific treatment for sleep apnoea
-            or reflux disease.
-          </p>
-        </section>
-
-        <section class="section" id="safety">
-          <h2>Medicines are effective, but they are not risk-free</h2>
-
-          <p>
-            The most common adverse effects of semaglutide and
-            tirzepatide are gastrointestinal, including nausea,
-            vomiting, diarrhoea, constipation and abdominal
-            discomfort. Some participants discontinue treatment
-            because of adverse effects.
-          </p>
-
-          <p>
-            Safe prescribing requires assessment of medical
-            history, other medicines, contraindications and
-            product-specific warnings. Pregnancy, dehydration,
-            gallbladder or pancreatic concerns, diabetes treatment
-            and planned procedures requiring anaesthesia may
-            require particular attention.
-          </p>
-
-          <div class="callout">
-            <p>
-              <b>Authorisation is not access:</b>
-              European authorisation does not guarantee that
-              a medicine is reimbursed, locally available or
-              appropriate for a particular person. Current
-              regulatory information and local clinical guidance
-              should always be checked.
-            </p>
-          </div>
-        </section>
-
-        <section class="section" id="stopping">
-          <h2>What happens when treatment stops?</h2>
-
-          <p>
-            Weight regain after treatment ends is common.
-            In an extension of STEP 1, participants regained
-            approximately two-thirds of the weight they had
-            previously lost during the year after semaglutide
-            and lifestyle support were withdrawn.
-          </p>
-
-          <p>
-            This does not mean that every person will regain
-            the same amount or that one medicine must be
-            continued for life. It does show that obesity
-            often requires a long-term maintenance strategy.
-          </p>
-
-          <p>
-            That strategy may involve continued medication,
-            behavioural and nutritional support, a different
-            treatment or a carefully monitored combination
-            of approaches.
-          </p>
-        </section>
-
-        <section class="section" id="surgery">
-          <h2>Where does metabolic surgery fit?</h2>
-
-          <p>
-            Metabolic and bariatric surgery is an evidence-based
-            treatment, not a personal failure or an
-            “easy way out.”
-          </p>
-
-          <p>
-            International guidance recommends surgery for many
-            people with a BMI of 35 kg/m² or above and recommends
-            considering it at lower BMI levels when metabolic
-            disease is present. Actual eligibility and access
-            vary between health systems.
-          </p>
-
-          <p>
-            For appropriately selected people, surgery can produce
-            substantial and durable benefits. Long-term
-            observational evidence has associated bariatric
-            surgery with lower overall mortality compared
-            with usual obesity care.
-          </p>
-
-          <p>
-            Surgery also carries short- and long-term risks.
-            It requires informed consent, multidisciplinary
-            assessment, nutritional monitoring and
-            lifelong follow-up.
-          </p>
-        </section>
-
-        <section class="central" id="central-message">
-          <h2>The central message</h2>
-
-          <p>
-            <strong>
-              There is no universally best obesity treatment.
-            </strong>
-          </p>
-
-          <p>
-            Good care considers the person’s health complications,
-            function, goals, previous treatment response, safety,
-            preferences and access to care. Behavioural support,
-            medication and surgery are not competing moral choices.
-            They are different tools that may be used alone,
-            sequentially or together.
-          </p>
-
-          <p>
-            The evidence supports treating obesity with the same
-            combination of scientific rigour, shared decision-making
-            and compassion expected for other chronic
-            health conditions.
-          </p>
-        </section>
-
-      </article>
-    </div>
-
-    <section class="references" id="references">
-      <div class="reading">
-        <h2>Evidence and sources</h2>
-
-        <p>
-          Scientific publications, reviews, guidance and official
-          European regulatory sources used for this brief.
-        </p>
-
-        <details open>
-          <summary>
-            Definitions, associated conditions and lifestyle treatment
-          </summary>
-
-          <ol class="refs">
-            <li>
-              Rubino F, et al.
-              Definition and diagnostic criteria of clinical obesity.
-              <em>Lancet Diabetes Endocrinol.</em> 2025.
-              <a href="https://doi.org/10.1016/S2213-8587(24)00316-4"
-                 target="_blank" rel="noopener noreferrer">
-                DOI ↗
-              </a>
-            </li>
-
-            <li>
-              Luppino FS, et al.
-              Overweight, obesity, and depression: a systematic
-              review and meta-analysis of longitudinal studies.
-              <em>Arch Gen Psychiatry.</em> 2010.
-              <a href="https://pubmed.ncbi.nlm.nih.gov/20194822/"
-                 target="_blank" rel="noopener noreferrer">
-                PubMed ↗
-              </a>
-            </li>
-
-            <li>
-              Gariepy G, et al.
-              The association between obesity and anxiety disorders
-              in the population: a systematic review and meta-analysis.
-              <em>Int J Obes.</em> 2010.
-              <a href="https://doi.org/10.1038/ijo.2009.252"
-                 target="_blank" rel="noopener noreferrer">
-                DOI ↗
-              </a>
-            </li>
-
-            <li>
-              Hampel H, et al.
-              Meta-analysis: obesity and the risk for gastroesophageal
-              reflux disease and its complications.
-              <em>Ann Intern Med.</em> 2005.
-              <a href="https://pubmed.ncbi.nlm.nih.gov/16061918/"
-                 target="_blank" rel="noopener noreferrer">
-                PubMed ↗
-              </a>
-            </li>
-
-            <li>
-              Knowler WC, et al.
-              Reduction in the incidence of type 2 diabetes
-              with lifestyle intervention or metformin.
-              <em>N Engl J Med.</em> 2002.
-              <a href="https://doi.org/10.1056/NEJMoa012512"
-                 target="_blank" rel="noopener noreferrer">
-                DOI ↗
-              </a>
-            </li>
-
-            <li>
-              Lean MEJ, et al.
-              Primary care-led weight management for remission
-              of type 2 diabetes (DiRECT).
-              <em>Lancet.</em> 2018.
-              <a href="https://doi.org/10.1016/S0140-6736(17)33102-1"
-                 target="_blank" rel="noopener noreferrer">
-                DOI ↗
-              </a>
-            </li>
-          </ol>
-        </details>
-
-        <details>
-          <summary>Medicines and clinical outcomes</summary>
-
-          <ol class="refs" start="7">
-            <li>
-              Wilding JPH, et al.
-              Once-weekly semaglutide in adults with overweight
-              or obesity (STEP 1).
-              <em>N Engl J Med.</em> 2021.
-              <a href="https://doi.org/10.1056/NEJMoa2032183"
-                 target="_blank" rel="noopener noreferrer">
-                DOI ↗
-              </a>
-            </li>
-
-            <li>
-              Lincoff AM, et al.
-              Semaglutide and cardiovascular outcomes in obesity
-              without diabetes (SELECT).
-              <em>N Engl J Med.</em> 2023.
-              <a href="https://doi.org/10.1056/NEJMoa2307563"
-                 target="_blank" rel="noopener noreferrer">
-                DOI ↗
-              </a>
-            </li>
-
-            <li>
-              Jastreboff AM, et al.
-              Tirzepatide once weekly for the treatment of obesity
-              (SURMOUNT-1).
-              <em>N Engl J Med.</em> 2022.
-              <a href="https://doi.org/10.1056/NEJMoa2206038"
-                 target="_blank" rel="noopener noreferrer">
-                DOI ↗
-              </a>
-            </li>
-
-            <li>
-              Aronne LJ, et al.
-              Tirzepatide as compared with semaglutide for the
-              treatment of obesity (SURMOUNT-5).
-              <em>N Engl J Med.</em> 2025.
-              <a href="https://doi.org/10.1056/NEJMoa2416394"
-                 target="_blank" rel="noopener noreferrer">
-                DOI ↗
-              </a>
-            </li>
-
-            <li>
-              Malhotra A, et al.
-              Tirzepatide for obstructive sleep apnea and obesity
-              (SURMOUNT-OSA).
-              <em>N Engl J Med.</em> 2024.
-              <a href="https://doi.org/10.1056/NEJMoa2404881"
-                 target="_blank" rel="noopener noreferrer">
-                DOI ↗
-              </a>
-            </li>
-
-            <li>
-              Wilding JPH, et al.
-              Weight regain after withdrawal of semaglutide:
-              STEP 1 extension.
-              <em>Diabetes Obes Metab.</em> 2022.
-              <a href="https://doi.org/10.1111/dom.14725"
-                 target="_blank" rel="noopener noreferrer">
-                DOI ↗
-              </a>
-            </li>
-          </ol>
-        </details>
-
-        <details>
-          <summary>Surgery and EU regulatory information</summary>
-
-          <ol class="refs" start="13">
-            <li>
-              Eisenberg D, et al.
-              2022 ASMBS/IFSO indications for metabolic and
-              bariatric surgery.
-              <em>Surg Obes Relat Dis.</em> 2022.
-              <a href="https://doi.org/10.1016/j.soard.2022.08.013"
-                 target="_blank" rel="noopener noreferrer">
-                DOI ↗
-              </a>
-            </li>
-
-            <li>
-              Sjöström L, et al.
-              Effects of bariatric surgery on mortality
-              in Swedish obese subjects.
-              <em>N Engl J Med.</em> 2007.
-              <a href="https://doi.org/10.1056/NEJMoa066254"
-                 target="_blank" rel="noopener noreferrer">
-                DOI ↗
-              </a>
-            </li>
-
-            <li>
-              European Medicines Agency.
-              Wegovy EPAR and product information.
-              <a href="https://www.ema.europa.eu/en/medicines/human/EPAR/wegovy"
-                 target="_blank" rel="noopener noreferrer">
-                EMA ↗
-              </a>
-            </li>
-
-            <li>
-              European Medicines Agency.
-              Mounjaro EPAR and product information.
-              <a href="https://www.ema.europa.eu/en/medicines/human/EPAR/mounjaro"
-                 target="_blank" rel="noopener noreferrer">
-                EMA ↗
-              </a>
-            </li>
-          </ol>
-        </details>
-
-        <p style="margin-top:28px; font-size:14px;">
-          <em>
-            This summary is for educational purposes and does
-            not provide individual medical advice. Evidence
-            and regulatory information should be checked for
-            updates before clinical use.
-          </em>
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footergrid">
-      <p>
-        © 2026 Karen Guimarães Hoyer.
-        Independent evidence-communication work.
+      <p class="eyebrow">
+        Independent patient-education sample · English
       </p>
 
-      <a href="/portfolio/#contact">
-        Contact Karen →
-      </a>
+      <h1>Obesity Explained</h1>
+
+      <p class="subtitle">
+        Understanding obesity, the treatment options
+        and why ongoing support matters.
+      </p>
+
+      <p class="byline">
+        Karen Guimarães Hoyer · AI-assisted revision
+      </p>
+
+      <div class="metastrip">
+        <span class="chip">For <b>adults</b></span>
+        <span class="chip">Plain-language <b>guide</b></span>
+      </div>
+    </header>
+
+    <div class="body">
+
+      <section class="block">
+        <div class="sec-head">
+          <span class="sec-num">01</span>
+          <h2>What is obesity?</h2>
+        </div>
+
+        <p>
+          Obesity is a long-term health condition in which
+          excess body fat can affect health. It is influenced
+          by biology, genes, medicines and the environment,
+          as well as eating and activity habits.
+        </p>
+
+        <p>
+          It is not simply a matter of willpower. Treatment
+          should offer practical support without blame.
+        </p>
+
+        <div class="note">
+          <div class="note-k">The main idea</div>
+          <p>
+            There is no single treatment that suits everyone.
+            The aim is to improve health and daily life,
+            not just change a number on the scale.
+          </p>
+        </div>
+
+        <p class="muted">
+          Sources:
+          <a href="#source-1">1</a> and
+          <a href="#source-2">2</a>.
+        </p>
+      </section>
+
+      <section class="block">
+        <div class="sec-head">
+          <span class="sec-num">02</span>
+          <h2>How is it assessed?</h2>
+        </div>
+
+        <p>
+          A clinician may use body mass index, or <b>BMI</b>:
+          a number calculated from weight and height.
+          It is useful for screening, but it cannot tell
+          muscle and fat apart.
+        </p>
+
+        <p>
+          Waist measurements, blood pressure, other health
+          conditions and difficulties with everyday activities
+          also help guide care.
+        </p>
+
+        <p class="muted">
+          Source: <a href="#source-2">2</a>.
+        </p>
+      </section>
+
+      <section class="block">
+        <div class="sec-head">
+          <span class="sec-num">03</span>
+          <h2>What can help?</h2>
+        </div>
+
+        <p>
+          Treatment may combine practical support,
+          medicines and, for some people, surgery.
+        </p>
+
+        <ul class="facts">
+          <li>
+            <b>Food and activity:</b>
+            realistic changes adapted to your health,
+            routine and resources.
+          </li>
+
+          <li>
+            <b>Support:</b>
+            help with habits and mental health concerns
+            that may make weight management harder.
+          </li>
+
+          <li>
+            <b>Medicines or surgery:</b>
+            additional options when appropriate,
+            assessed with a healthcare team.
+          </li>
+        </ul>
+
+        <p class="muted">
+          Sources:
+          <a href="#source-1">1</a> and
+          <a href="#source-2">2</a>.
+        </p>
+      </section>
+
+      <section class="block">
+        <div class="sec-head">
+          <span class="sec-num">04</span>
+          <h2>What about weight-management medicines?</h2>
+        </div>
+
+        <p>
+          Some medicines help reduce hunger and make you
+          feel full for longer. Semaglutide and tirzepatide
+          are examples. They are used with support for
+          eating and activity habits.
+        </p>
+
+        <p>
+          They can help some people lose weight, but results
+          vary. A clinician should check whether a medicine
+          is suitable for you.
+        </p>
+
+        <div class="caveat">
+          <b>Benefits come with possible side effects.</b>
+          These can include nausea, vomiting, diarrhoea,
+          constipation and stomach pain. Ask about other
+          risks and precautions before treatment.
+        </div>
+
+        <p class="muted">
+          Sources:
+          <a href="#source-3">3</a> and
+          <a href="#source-4">4</a>.
+          These links describe European medicine information;
+          local availability and prescribing rules vary.
+        </p>
+      </section>
+
+      <section class="block">
+        <div class="sec-head">
+          <span class="sec-num">05</span>
+          <h2>When might surgery be considered?</h2>
+        </div>
+
+        <p>
+          Weight-loss surgery, also called
+          <b>bariatric surgery</b>, is an option for some people.
+          It changes the stomach and sometimes the digestive
+          system to help with weight loss.
+        </p>
+
+        <p>
+          A specialist team assesses suitability and discusses
+          benefits and risks. Surgery also requires changes
+          in eating habits and ongoing care.
+        </p>
+
+        <div class="note">
+          <div class="note-k">After surgery</div>
+          <p>
+            Follow-up continues for life. Check-ups,
+            blood tests and vitamin or mineral supplements
+            may be needed to protect your health.
+          </p>
+        </div>
+
+        <p class="muted">
+          Sources:
+          <a href="#source-5">5</a> and
+          <a href="#source-6">6</a>.
+        </p>
+      </section>
+
+      <section class="block">
+        <div class="sec-head">
+          <span class="sec-num">06</span>
+          <h2>Why does ongoing support matter?</h2>
+        </div>
+
+        <p>
+          Obesity often needs long-term care.
+          Maintaining weight loss can be difficult,
+          and a plan may need to change over time.
+        </p>
+
+        <p>
+          If medicine is stopped, ask about support for
+          maintaining progress. Keep attending follow-up
+          appointments and discuss difficulties with
+          your healthcare team.
+        </p>
+
+        <p class="muted">
+          Sources:
+          <a href="#source-1">1</a> and
+          <a href="#source-2">2</a>.
+        </p>
+      </section>
+
+      <section class="block">
+        <div class="sec-head">
+          <span class="sec-num">07</span>
+          <h2>Where can I start?</h2>
+        </div>
+
+        <p>
+          Book a conversation with a healthcare professional.
+          You do not need to choose a treatment before
+          asking for help.
+        </p>
+
+        <ul class="facts">
+          <li>
+            <b>“How is my weight affecting my health?”</b>
+          </li>
+
+          <li>
+            <b>“Which options are suitable for me?”</b>
+          </li>
+
+          <li>
+            <b>“What benefits, risks and costs should I consider?”</b>
+          </li>
+
+          <li>
+            <b>“What support and follow-up can I access?”</b>
+          </li>
+        </ul>
+
+        <div class="note">
+          <div class="note-k">Takeaway</div>
+          <p>
+            Good care combines evidence, practical support
+            and your own priorities. You deserve a plan
+            that fits your health and your life.
+          </p>
+        </div>
+      </section>
+
     </div>
-  </footer>
 
-  <script>
-    const tocLinks = [
-      ...document.querySelectorAll(
-        '.toc a[href^="#"]:not(.toc-top)'
-      )
-    ];
+    <footer class="regfooter">
+      <span class="ai-badge">
+        AI-assisted revision and layout
+      </span>
 
-    const sections = tocLinks
-      .map(link => document.querySelector(
-        link.getAttribute("href")
-      ))
-      .filter(Boolean);
+      <p class="rf-k">Sources and scope</p>
 
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver(entries => {
-        const visible = entries
-          .filter(entry => entry.isIntersecting)
-          .sort((a, b) =>
-            a.boundingClientRect.top - b.boundingClientRect.top
-          )[0];
+      <p>
+        Independent patient-education sample by
+        Karen Guimarães Hoyer. This is an introductory
+        guide, not a comparison of individual clinical trials.
+        No affiliation with the organisations cited.
+      </p>
 
-        if (!visible) return;
+      <ol class="source-list">
+        <li id="source-1">
+          <a href="https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight">
+            World Health Organization —
+            Obesity and overweight
+          </a>
+        </li>
 
-        tocLinks.forEach(link => {
-          const active =
-            link.getAttribute("href") ===
-            "#" + visible.target.id;
+        <li id="source-2">
+          <a href="https://www.nhs.uk/conditions/overweight-and-obesity/">
+            NHS — Overweight and obesity in adults
+          </a>
+        </li>
 
-          link.setAttribute("aria-current", String(active));
-        });
+        <li id="source-3">
+          <a href="https://www.ema.europa.eu/en/medicines/human/EPAR/wegovy">
+            European Medicines Agency —
+            Wegovy (semaglutide)
+          </a>
+        </li>
 
-        const current = tocLinks.find(link =>
-          link.getAttribute("aria-current") === "true"
-        );
+        <li id="source-4">
+          <a href="https://www.ema.europa.eu/en/medicines/human/EPAR/mounjaro">
+            European Medicines Agency —
+            Mounjaro (tirzepatide)
+          </a>
+        </li>
 
-        if (window.innerWidth <= 900 && current) {
-          const nav = current.parentElement;
-          const reducedMotion = window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-          ).matches;
+        <li id="source-5">
+          <a href="https://www.nhs.uk/tests-and-treatments/weight-loss-surgery/what-is-weight-loss-surgery/">
+            NHS — What is weight loss surgery?
+          </a>
+        </li>
 
-          nav.scrollTo({
-            left:
-              current.offsetLeft -
-              (nav.clientWidth - current.clientWidth) / 2,
-            behavior: reducedMotion ? "auto" : "smooth"
-          });
-        }
-      }, {
-        rootMargin: "-15% 0px -70% 0px",
-        threshold: 0
-      });
+        <li id="source-6">
+          <a href="https://www.nhs.uk/tests-and-treatments/weight-loss-surgery/recovering/">
+            NHS — Recovering from weight loss surgery
+          </a>
+        </li>
+      </ol>
 
-      sections.forEach(section => observer.observe(section));
-    }
-  </script>
+      <p>
+        Sources checked on 2 October 2026.
+        This guide focuses on adult care. Children and
+        pregnancy require different assessment.
+      </p>
+
+      <p class="disclaim">
+        General health information, not personal medical
+        advice. Discuss treatment decisions with a
+        qualified healthcare professional.
+      </p>
+
+      <p>
+        <a href="/portfolio/#communication">
+          ← Back to portfolio
+        </a>
+      </p>
+    </footer>
+
+  </main>
 </body>
 </html>
