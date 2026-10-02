@@ -69,4 +69,39 @@ span {
 .tagline {
   letter-spacing: 1px;
 }
- 
+
+:root {
+  --ink: #0b2236;
+  --paper: #f7f5ef;
+  --cream: #fcf0cc;
+  --teal: #5fc8bd;
+}
+
+body {
+  color: var(--paper);
+}
+
+h1,
+h1 span {
+  color: var(--cream);
+}
+
+p {
+  color: #a4b5c2;
+}
+
+a {
+  color: var(--paper);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover {
+  color: var(--teal);
+  border-top-color: var(--teal);
+  border-bottom-color: var(--teal);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 5px;
+}
