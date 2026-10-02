@@ -11,6 +11,13 @@
 
   <link rel="icon" type="image/png" href="/favicon-v8.png">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect"
+      href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap"
+      rel="stylesheet">
+  
   <style>
     :root {
       --ink: #0b2236;
@@ -665,6 +672,112 @@
         break-inside: avoid;
       }
     }
+
+    /* Composição alinhada ao sample de hipertensão */
+
+header {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.topbar {
+  padding: 20px 0;
+  border-bottom-color: var(--line);
+}
+
+.wordmark {
+  color: var(--ink);
+}
+
+.back {
+  color: #4d5088;
+}
+
+header a:hover {
+  color: #286f69;
+}
+
+.hero {
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 48px 0 36px;
+}
+
+.eyebrow {
+  color: #4d5088;
+}
+
+.hero h1 {
+  max-width: 18ch;
+  margin: 16px 0 20px;
+  color: var(--ink);
+  font-family: "Fraunces", "Times New Roman", serif;
+  font-size: clamp(38px, 6vw, 56px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+}
+
+.hero h1::after {
+  display: none;
+}
+
+.hero .lead {
+  max-width: 60ch;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.meta {
+  margin-top: 24px;
+}
+
+.meta span {
+  color: #4d5088;
+  border-color: var(--line);
+}
+
+.method {
+  max-width: 65ch;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.method b {
+  color: #4d5088;
+}
+
+.method p {
+  margin-bottom: 0;
+}
+
+.plain-language-intro h2,
+.section h2,
+.central h2,
+.references h2,
+.standfirst,
+.trial b,
+.outcome .number {
+  font-family: "Fraunces", "Times New Roman", serif;
+  font-weight: 500;
+}
+
+.section h2 {
+  font-size: clamp(26px, 3vw, 32px);
+}
+
+.standfirst {
+  font-size: 24px;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding: 36px 0 28px;
+  }
+}
+    
   </style>
 </head>
 
