@@ -1087,3 +1087,38 @@ html {
     gap: 24px;
   }
 }
+
+/* Paleta: Paper como base clara, Cream como acento */
+:root {
+  --paper: #f7f5ef;
+  --cream: #fcf0cc;
+  --muted: #a4b5c2;
+}
+
+body {
+  color: var(--paper);
+}
+
+.hero h1,
+.work h2,
+.project-card h3,
+.evidence-case h3,
+.contact h2,
+.nav-brand {
+  color: var(--cream);
+}
+
+.background {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.hero-actions a,
+.project-actions a {
+  color: var(--paper);
+}
+
+.hero-actions a:hover,
+.project-actions a:hover {
+  color: var(--teal);
+}
