@@ -966,6 +966,26 @@ html {
     margin-top: 32px;
   }
 
+  .background {
+  max-width: none;
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+
+  /* mantém o conteúdo alinhado com as outras seções */
+  padding: 60px max(40px, calc((100% - 1200px) / 2)) 100px;
+}
+
+.background-grid article {
+  border-top-color: var(--ink);
+}
+
+@media (max-width: 800px) {
+  .background {
+    padding: 48px 24px 72px;
+  }
+}
+
   .background-intro p {
     font-size: 17px;
   }
