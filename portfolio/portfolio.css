@@ -1491,3 +1491,167 @@ body {
     padding: 22px 18px;
   }
 }
+
+/* Elevação dos três cards */
+
+.communication-card {
+  background: var(--paper, #f7f5ef);
+  border-radius: 16px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .communication-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(11, 34, 54, 0.16);
+  }
+}
+
+.communication-card:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(11, 34, 54, 0.16);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .communication-card {
+    transition: none;
+  }
+
+  .communication-card:hover,
+  .communication-card:focus-within {
+    transform: none;
+  }
+}
+
+/* Ajuste fino da tipografia */
+
+.hero h1 {
+  font-size: clamp(36px, 5.5vw, 64px);
+  line-height: 1.1;
+}
+
+.work h2,
+.communication h2,
+.background h2,
+.contact h2 {
+  font-size: clamp(28px, 3.5vw, 42px);
+  line-height: 1.2;
+}
+
+.project-card h3 {
+  font-size: clamp(28px, 3vw, 32px);
+}
+
+.communication-feature h3 {
+  font-size: clamp(30px, 3.5vw, 40px);
+  line-height: 1.15;
+}
+
+.communication-card h3 {
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.hero-description,
+.project-intro,
+.tab-content p,
+.flow-description,
+#taxonomy .taxonomy-description,
+.contact-description,
+.communication-feature-copy > p:not(.communication-kicker) {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.communication-feature-panel li {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#audit-trace h3 {
+  font-size: clamp(28px, 3.5vw, 36px);
+  line-height: 1.2;
+}
+
+#audit-trace .audit-step p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+#audit-trace .audit-values strong {
+  font-size: clamp(30px, 4vw, 38px);
+}
+
+#audit-trace details p {
+  font-size: 14px;
+}
+
+/* Background — layout e acentos */
+
+.background {
+  background: var(--paper, #f7f5ef);
+  color: var(--ink);
+}
+
+.background-header {
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.background .section-label {
+  color: #506372;
+}
+
+.background-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.background-grid article {
+  padding: 28px;
+  border: 1px solid rgba(11, 34, 54, 0.14);
+  border-radius: 16px;
+  background: rgba(252, 240, 204, 0.3);
+}
+
+.background-grid article::before {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 3px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  background: var(--teal);
+}
+
+.background-grid h3 {
+  margin: 0 0 16px;
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.background-grid p {
+  max-width: 58ch;
+  color: #344b5d;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+@media (max-width: 800px) {
+  .background-inner {
+    padding: 48px 24px 56px;
+  }
+
+  .background-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .background-grid article {
+    padding: 24px;
+  }
+}
