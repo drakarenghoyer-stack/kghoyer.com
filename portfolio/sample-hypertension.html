@@ -522,11 +522,46 @@ header.head .mast-brand {
     print-color-adjust: exact;
   }
 }
+
+.sample-bar {
+  padding: 9px 14px;
+  background: #0b2236;
+  color: #f7f5ef;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.sample-bar a {
+  color: #fcf0cc;
+}
+
+.sample-bar a:hover {
+  color: #5fc8bd;
+}
+
+.sample-bar a:focus-visible {
+  outline: 2px solid #5fc8bd;
+  outline-offset: 4px;
+}
+
+@media print {
+  .sample-bar {
+    display: none;
+  }
+}
     
   </style>
 </head>
 
 <body>
+
+<div class="sample-bar">
+  Writing sample · patient education ·
+  <a href="/portfolio/#communication">back to portfolio</a>
+</div>
   
   <header class="head">
     <div class="wrap">
