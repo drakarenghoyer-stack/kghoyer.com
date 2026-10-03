@@ -1351,3 +1351,47 @@ body {
     padding: 28px 24px;
   }
 }
+
+/* Mais destaque para o pipeline */
+
+.project-flow {
+  gap: 16px;
+}
+
+.project-flow .flow-step {
+  padding: 20px 18px;
+  gap: 14px;
+  border: 1px solid rgba(95, 200, 189, 0.35);
+  border-radius: 12px;
+  background: rgba(95, 200, 189, 0.06);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.project-flow .flow-step span {
+  font-size: 14px;
+  background: transparent;
+}
+
+.project-flow .flow-step strong {
+  font-size: 17px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.project-flow .flow-step:hover,
+.project-flow .flow-step.active {
+  border-color: var(--teal);
+  background: rgba(95, 200, 189, 0.14);
+}
+
+.project-flow .flow-step:focus-visible {
+  outline: 2px solid var(--cream);
+  outline-offset: 4px;
+}
+
+@media (max-width: 480px) {
+  .project-flow {
+    grid-template-columns: 1fr;
+  }
+}
+
