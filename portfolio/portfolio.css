@@ -1897,3 +1897,27 @@ body {
     padding: 0;
   }
 }
+
+.site-footer-inner {
+  display: block;
+}
+
+.site-footer p .footer-motto {
+  display: inline;
+  margin-left: 12px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+
+.site-footer p .footer-note {
+  display: block;
+  margin-top: 6px;
+}
+
+@media (max-width: 600px) {
+  .site-footer p .footer-motto {
+    display: block;
+    margin: 6px 0 0;
+  }
+}
