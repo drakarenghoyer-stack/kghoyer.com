@@ -105,3 +105,42 @@ a:focus-visible {
   outline: 2px solid var(--teal);
   outline-offset: 5px;
 }
+
+.site-footer {
+  padding: 28px 32px;
+  border-top: 1px solid rgba(95, 200, 189, 0.25);
+  background: #0b2236;
+  color: #a4b5c2;
+}
+
+.site-footer p {
+  max-width: 1120px;
+  margin: 0 auto;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.site-footer .footer-motto {
+  display: inline;
+  margin-left: 12px;
+  font-size: 10px;
+    font-style: italic;
+  letter-spacing: 0.04em;
+}
+
+.site-footer .footer-note {
+  display: block;
+  margin-top: 6px;
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 24px;
+  }
+
+  .site-footer .footer-motto {
+    display: block;
+    margin: 6px 0 0;
+  }
+}
