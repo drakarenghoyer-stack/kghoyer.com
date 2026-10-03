@@ -372,12 +372,20 @@
 
   <div class="audit-trace">
 
-    <div class="audit-step">
-      <span class="claim-status">REFERENCE VALUES</span>
-      <p>
-        Nausea: 22.4% in the synthemide group;
-        9.1% in the placebo group.
-      </p>
+    <div class="audit-step audit-reference">
+      <span>REFERENCE VALUES</span>
+      <p class="audit-values">
+  <span>
+    <strong>22.4%</strong>
+    Synthemide
+  </span>
+  <span>
+    <strong>9.1%</strong>
+    Placebo
+  </span>
+</p>
+
+<p>Nausea reported in each group.</p>
 
       <details>
         <summary>Source trace</summary>
@@ -394,8 +402,8 @@
 
     <div class="audit-arrow">↓</div>
 
-    <div class="audit-step">
-      <span class="claim-status">GENERATED TEXT · BASE CASE</span>
+    <div class="audit-step audit-base">
+      <span>GENERATED TEXT · BASE CASE</span>
       <p>
         “Nausea was reported more often in people taking
         synthemide than in those taking placebo.”
@@ -404,8 +412,8 @@
 
     <div class="audit-arrow">↓</div>
 
-    <div class="audit-step">
-      <span class="claim-status">DELIBERATELY INJECTED ERROR</span>
+    <div class="audit-step audit-error">
+      <span>DELIBERATELY INJECTED ERROR</span>
       <p>
         “Nausea was reported more often in people taking
         placebo than in those taking synthemide.”
