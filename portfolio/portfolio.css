@@ -1395,3 +1395,99 @@ body {
   }
 }
 
+/* Recorded development case */
+
+#audit-trace {
+  margin-top: 64px;
+  padding-top: 40px;
+  border-top: 2px solid var(--teal);
+}
+
+#audit-trace .case-label {
+  color: var(--teal);
+  line-height: 1.6;
+}
+
+#audit-trace h3 {
+  max-width: 24ch;
+  margin: 18px 0 24px;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.15;
+}
+
+#audit-trace .audit-trace {
+  max-width: 900px;
+  margin-top: 32px;
+}
+
+#audit-trace .audit-step {
+  padding: 28px;
+  border-left-width: 4px;
+}
+
+#audit-trace .claim-status {
+  display: block;
+  color: var(--cream);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+#audit-trace .audit-step p {
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+#audit-trace .audit-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 48px;
+  margin-top: 20px;
+}
+
+#audit-trace .audit-values span {
+  display: flex;
+  flex-direction: column;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+#audit-trace .audit-values strong {
+  color: var(--cream);
+  font-size: clamp(32px, 5vw, 44px);
+  line-height: 1.2;
+}
+
+#audit-trace .audit-error {
+  border-color: var(--coral);
+  background: rgba(246, 122, 95, 0.08);
+}
+
+#audit-trace .audit-error .claim-status {
+  color: var(--coral);
+}
+
+#audit-trace .audit-finding {
+  border-color: var(--teal);
+  background: rgba(95, 200, 189, 0.08);
+}
+
+#audit-trace .audit-finding .claim-status,
+#audit-trace .audit-finding strong {
+  color: var(--teal);
+}
+
+#audit-trace .audit-arrow {
+  padding: 14px 0;
+  color: var(--teal);
+  font-size: 24px;
+}
+
+#audit-trace details p {
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  #audit-trace .audit-step {
+    padding: 22px 18px;
+  }
+}
