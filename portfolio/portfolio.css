@@ -1907,6 +1907,7 @@ body {
   margin-left: 12px;
   color: var(--muted);
   font-size: 10px;
+  font-style: italic;
   letter-spacing: 0.04em;
 }
 
