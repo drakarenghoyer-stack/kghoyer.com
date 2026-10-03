@@ -442,17 +442,72 @@
         print-color-adjust: exact;
       }
     }
+
+/* Cabeçalho igual ao EMERGENT */
+
+.masthead {
+  padding: 40px 48px 44px;
+}
+
+.masthead-top {
+  display: flex;
+  align-items: center;
+  padding-bottom: 24px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--line);
+}
+
+.mast-brand {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.mast-brand b {
+  color: var(--ink);
+}
+
+/* Compatibilidade com a paleta da hipertensão */
+
+header.head .mast-brand {
+  color: var(--muted, var(--ink-soft, #506372));
+}
+
+/* Celular */
+
+@media (max-width: 620px) {
+  .masthead {
+    padding: 28px 24px 32px;
+  }
+
+  .masthead-top {
+    margin-bottom: 28px;
+  }
+}
+
+/* Impressão / PDF */
+
+@media print {
+  .masthead {
+    padding-top: 20px;
+  }
+}
+    
   </style>
 </head>
 
 <body>
-  <div class="sample-bar">
-    Writing sample · patient education ·
-    <a href="/portfolio/">back to portfolio</a>
-  </div>
-
+  
   <header class="head">
     <div class="wrap">
+      <div class="masthead-top">
+  <span class="mast-brand">
+    <b>KG Hoyer</b><br>
+    Medical writing &amp; clinical communication
+  </span>
+</div>
       <span class="eyebrow">
         Patient education · English sample
       </span>
