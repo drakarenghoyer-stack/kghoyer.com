@@ -1834,3 +1834,66 @@ body {
     gap: 20px;
   }
 }
+
+/* Background: proporções mais leves */
+
+.background-header {
+  grid-template-columns: 200px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 32px;
+  margin-bottom: 36px;
+}
+
+.background h2 {
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.15;
+}
+
+.background-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+  align-items: start;
+}
+
+.background-grid article {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.background-grid h3 {
+  margin: 0 0 18px;
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+.background-grid h3::after {
+  width: 40px;
+  height: 2px;
+  margin-top: 14px;
+}
+
+.background-grid p {
+  max-width: none;
+  margin-bottom: 16px;
+  color: #506372;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+@media (max-width: 800px) {
+  .background-header {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .background-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .background-grid article {
+    padding: 0;
+  }
+}
