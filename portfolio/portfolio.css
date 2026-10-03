@@ -1921,3 +1921,108 @@ body {
     margin: 6px 0 0;
   }
 }
+
+/* Abertura: composição mais equilibrada */
+
+.site-nav {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding: 24px 40px;
+  gap: 32px;
+  border-bottom: 1px solid rgba(252, 240, 204, 0.2);
+}
+
+.nav-links {
+  width: auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px 24px;
+}
+
+.hero {
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding: 64px 40px 72px;
+  grid-template-columns: minmax(0, 1.8fr) minmax(240px, 1fr);
+  align-items: center;
+  gap: 48px;
+}
+
+.hero-main,
+.hero-context {
+  min-width: 0;
+}
+
+.hero h1 {
+  max-width: 17ch;
+  margin: 20px 0 24px;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.08;
+}
+
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin-top: 26px;
+  border-radius: 3px;
+  background: var(--coral);
+}
+
+.hero .hero-description {
+  max-width: 54ch;
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.7;
+}
+
+.hero-context {
+  padding-top: 22px;
+  padding-bottom: 0;
+}
+
+.hero-context h2 {
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.hero-context p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+@media (max-width: 680px) {
+  .site-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 40px 24px 48px;
+    gap: 36px;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 8vw, 48px);
+  }
+}
