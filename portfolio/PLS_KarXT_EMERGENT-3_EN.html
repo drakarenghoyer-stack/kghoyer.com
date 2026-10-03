@@ -456,26 +456,54 @@
         break-inside: avoid;
       }
     }
+
+.sample-bar {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 9px 14px;
+  background: #0b2236;
+  color: #f7f5ef;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 1.62;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.sample-bar a {
+  color: #fcf0cc;
+}
+
+.sample-bar a:hover {
+  color: #5fc8bd;
+}
+
+.sample-bar a:focus-visible {
+  outline: 2px solid #5fc8bd;
+  outline-offset: 4px;
+}
+
+@media print {
+  .sample-bar {
+    display: none;
+  }
+}
+    
   </style>
 </head>
 
 <body>
+  <div class="sample-bar">
+    Writing sample · plain-language summary ·
+    <a href="/portfolio/#communication">back to portfolio</a>
+  </div>
+
   <main class="sheet">
 
     <header class="masthead">
-      <div class="masthead-top">
-        <span class="mast-brand">
-          <b>KG Hoyer</b><br>
-          Medical writing &amp; clinical communication
-        </span>
-      </div>
-
-      <p class="eyebrow">
-        Independent medical writing sample · English version
-      </p>
-
       <h1>Plain Language Summary</h1>
-
       <p class="subtitle">
         EMERGENT-3 — A study of KarXT in adults hospitalised
         with an acute episode of schizophrenia.
